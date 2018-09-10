@@ -1,0 +1,51 @@
+*{
+    font-family:  Helvetica, sans-serif;                  
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+a::after {
+    content:"_";
+    opacity: 0; 
+}
+a:hover::after {
+    content:"_";
+    opacity: 100;
+    animation: blink 750ms infinite;
+}
+body{
+    background-color:rgb(37,51,56);
+}
+#profile{
+    color: rgb(240,254,255);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: arial-pixels, arial;
+}
+h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::after, h6:hover::after{
+    content:"_";
+    animation: blink 750ms infinite;     
+}            
+label{
+    padding-right: 5px;
+    font-size: 12px;
+    font-family: arial-pixels, arial;
+}
+.navbar a{
+    font-family: arial-pixels, arial; 
+    color: rgb(240,254,255)   
+}
+.navbar a:hover{
+    text-shadow: 0px 0px 3px rgb(240,254,255);
+}
+@keyframes blink{
+    100%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 100;
+    }
+}
