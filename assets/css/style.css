@@ -1,8 +1,9 @@
 *{
-    font-family:  Helvetica, sans-serif;                  
+    font-family:  Ubuntu-mono,monospace, sans-serif;                  
 }
 a{
     text-decoration: none;
+    color:#007CB1;
 }
 a:hover{
     text-decoration: none;
@@ -31,11 +32,6 @@ h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::af
     content:"_";
     animation: blink 750ms infinite;     
 }            
-label{
-    padding-right: 5px;
-    font-size: 12px;
-    font-family: arial-pixels, arial;
-}
 .navbar a{
     font-family: arial-pixels, arial; 
     color: rgb(240,254,255)   
@@ -45,6 +41,25 @@ label{
 }
 img{
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+}
+
+
+dt{
+    display: block;
+    height: 24px;
+    float: left;
+    width: 15%;
+    
+    color:#FFF;
+    font-size: 11px;
+    font-family: arial-pixels, arial;
+}
+dd{
+    display: block ;
+    float: left;
+    height: 24px;
+    width:85%;
+    color: #c0c0c0;
 }
 @keyframes blink{
     100%{
