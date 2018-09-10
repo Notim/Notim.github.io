@@ -2,103 +2,94 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>Notim_::profile();</title>
-        <link rel="stylesheet" type="text/css" href="assets/fonts/Ubuntu/Ubuntu.css" />
-        <link rel="stylesheet" type="text/css" href="assets/fonts/Visitor/Visitor.css" />
-        <link rel="stylesheet" type="text/css" href="assets/fonts/Hellovetica/Hellovetica.css" />
-        
+        <title>Notim::profile($mine);</title>
+
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap4.1.1/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="assets/fonts/pixArial/arialPixels.css" />
         
         <style>
             *{
-                font-family:  Hellovetica, Helvetica, sans-serif;                
+                font-family:  Helvetica, sans-serif;                  
             }
-            a{
-               text-decoration: none; 
+            a::after {
+                content:"_";
+                opacity: 0; 
             }
             a:hover::after {
-                content: "_"; /* Insert content that looks like bullets */
-                animation: blinker 750ms infinite;
+                content:"_";
+                opacity: 100;
+                animation: blink 750ms infinite;
             }
-            body {
-                box-sizing: border-box;
-                padding: 0px;
-                margin: 0px;
-                background-color: #0c0c0c;
-                color: forestgreen; 
+            body{
+                background-color:rgb(37,51,56);
             }
-            h1{
-                font-weight: bold;
+            #profile{
+                color: rgb(240,254,255);
             }
-            h2{
-                font-style: italic;
+            h1, h2, h3, h4, h5, h6{
+                font-family: arial-pixels, arial;
             }
-            h3{
-                font-weight: bold;
-                font-style: italic;
-            }
-            pre{
-                font-family: Ubuntu-Mono;
-            }
-            pre.terminalLinux{
-                font-family: Ubuntu-Mono;
-                font-weight: bold !important ;
-                font-size: 14px;      
-                padding: 5px;
-                color:rgb(127, 197, 62);
-                height: 200px;
-                width: 100%;
-                background-color: rgb(39, 7, 30);
-            }
-            pre.terminalLinux > .root{   
-                color:rgb(127, 197, 62);
-            }             
-            pre.terminalLinux > .path{   
-                color:rgb(107, 142, 184);
-            } 
-            pre.terminalLinux > .command{   
-                color:rgb(245, 251, 255);
-            }           
-            
-            pre.powerShell{
-                font-family: "Lucida Console";
-                font-size: 14px;      
-                padding: 5px;
-                color:rgb(237, 238, 240);
-                height: 200px;
-                width: 100%;
-                background-color: rgb(1, 33, 86);
+            h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::after, h6:hover::after{
+                content:"_";
+                animation: blink 750ms infinite;     
             }            
-            .terminalCursor {
-                animation: blinker 750ms infinite;
+            label{
+                padding-right: 5px;
+                font-size: 12px;
+                font-family: arial-pixels, arial;
             }
-            @keyframes blinker {
-                50% {
+            .navbar a{
+                font-family: arial-pixels, arial; 
+                color: rgb(240,254,255)   
+            }
+            .navbar a:hover{
+                text-shadow: 0px 1px 1px rgb(240,254,255);   
+            }
+
+            @keyframes blink{
+                100%{
                     opacity: 0;
                 }
+                0%{
+                    opacity: 100;
+                }
             }
-            
         </style>
     </head>
     <body>
-        <nav>
-            <div>
-                <a>Profile</a>
-            </div>
-            <div>
-                <a>Projects</a>
-            </div>
-            <div>
-                <a>Posts</a>
-            </div>
-        </nav>
-        <h1><a>NOTIM</a></h1>
-        <p>Olá teste para ver se a fonte comum funciona.</p>
-        <a href="#" >Código em GoLang</a>
-
+        <div class="container">             
+            <nav style="margin-top: 50px" class="navbar navbar-expand-sm sticky-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#posts">Posts</a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="profile" style="margin-top:100px; height: 1500px;">
+                <article class="row" > 
+                    <div class="col-4">
+                        <img style="width: 300px;" src="https://avatars2.githubusercontent.com/u/33599569?s=460&v=4" class="rounded" alt="Its me!">
+                    </div>
+                    <div class="col-8">
+                        <h4>NOTIM</h4>
+                        <p><label>Email:</label><a href="#">reply@notim.com</a></p>
+                        <a href="#">Código em GoLang</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt possimus delectus ducimus iusto, repellat totam doloribus eos? Quisquam suscipit earum sunt dicta velit doloribus autem, pariatur, necessitatibus, quia voluptatem consequuntur.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        
         <!--<label>Terminal linux:</label>
-<pre class="terminalLinux">
-<span class="root">any@ubuntu:</span> <span class="path">~/Desktop/text</span><span class="command">$ ls <span class='terminalCursor'> | </span></span>
-</pre>-->  
+            <pre class="terminalLinux">
+            <span class="root">any@ubuntu:</span> <span class="path">~/Desktop/text</span><span class="command">$ ls <span class='terminalCursor'> | </span></span>
+            </pre>-->  
         
 
 <!--<label>PowerShell windows:</label>
