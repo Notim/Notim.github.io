@@ -17,7 +17,8 @@ a:hover::after {
     animation: blink 750ms infinite;
 }
 body{
-    background-color:rgb(37,51,56);
+    /*background-image:linear-gradient(to  right, rgba(37,51,56,1),rgba(76,144,93,1));*/
+    background-image:linear-gradient(to  right, rgba(30,40,60,1),rgba(50,120,70,1))
 }
 #profile{
     color: rgb(240,254,255);
@@ -40,6 +41,9 @@ label{
 }
 .navbar a:hover{
     text-shadow: 0px 0px 3px rgb(240,254,255);
+}
+img{
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5))
 }
 @keyframes blink{
     100%{
