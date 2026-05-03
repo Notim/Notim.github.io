@@ -15,9 +15,7 @@
     --border: rgba(255,255,255,0.07);
     --border2: rgba(255,255,255,0.12);
     --accent: #00e5a0;
-    --accent2: #00b87a;
     --accent-dim: rgba(0,229,160,0.08);
-    --accent-glow: rgba(0,229,160,0.15);
     --text: #f0f2f7;
     --text2: #8b90a0;
     --text3: #545870;
@@ -29,370 +27,183 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
 
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 clamp(1.5rem, 5vw, 5rem);
-    height: 64px;
-    background: rgba(9,11,16,0.85);
-    backdrop-filter: blur(16px);
+    padding: 0 clamp(1.5rem, 5vw, 5rem); height: 64px;
+    background: rgba(9,11,16,0.88); backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
-  .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.1rem; font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    text-decoration: none;
-  }
+  .nav-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); text-decoration: none; }
   .nav-logo span { color: var(--accent); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.825rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--text2); text-decoration: none; transition: color 0.2s;
-  }
+  .nav-links a { font-size: 0.825rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text2); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-  .nav-cta {
-    font-family: var(--font-mono); font-size: 0.8rem;
-    background: var(--accent); color: #000; font-weight: 500;
-    padding: 0.4rem 1.1rem; border-radius: 4px; text-decoration: none;
-    transition: opacity 0.2s;
-  }
+  .nav-cta { font-family: var(--font-mono); font-size: 0.8rem; background: var(--accent); color: #000; font-weight: 500; padding: 0.4rem 1.1rem; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
   .nav-cta:hover { opacity: 0.85; }
 
-  /* ── HERO ── */
   #hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
     padding: clamp(6rem, 10vw, 10rem) clamp(1.5rem, 5vw, 5rem) 4rem;
     position: relative; overflow: hidden;
   }
   .hero-grid-bg {
     position: absolute; inset: 0; pointer-events: none;
-    background-image:
-      linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
   }
-  .hero-glow {
-    position: absolute; top: -200px; left: -200px; width: 800px; height: 800px;
-    background: radial-gradient(circle, rgba(0,229,160,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
+  .hero-glow { position: absolute; top: -200px; left: -200px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(0,229,160,0.06) 0%, transparent 70%); pointer-events: none; }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em;
-    color: var(--accent); background: var(--accent-dim);
-    border: 1px solid rgba(0,229,160,0.2);
-    padding: 0.3rem 0.8rem; border-radius: 100px; width: fit-content;
-    margin-bottom: 1.5rem;
+    color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.2);
+    padding: 0.3rem 0.8rem; border-radius: 100px; width: fit-content; margin-bottom: 1.5rem;
     animation: fadeUp 0.6s ease both;
   }
   .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .hero-h1 {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    font-weight: 800; line-height: 1.0; letter-spacing: -0.04em;
-    margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
+  .hero-h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
   .hero-h1 .line2 { color: var(--accent); }
-  .hero-sub {
-    font-size: clamp(1rem, 1.5vw, 1.15rem);
-    color: var(--text2); max-width: 580px; line-height: 1.75;
-    margin-bottom: 2.5rem;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
-  .hero-tags {
-    display: flex; flex-wrap: wrap; gap: 0.6rem;
-    margin-bottom: 2.5rem;
-    animation: fadeUp 0.6s 0.25s ease both;
-  }
-  .tag {
-    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em;
-    color: var(--text3); background: var(--surface);
-    border: 1px solid var(--border); border-radius: 4px;
-    padding: 0.25rem 0.7rem;
-  }
-  .hero-actions {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
-  .btn-primary {
-    font-family: var(--font-display); font-size: 0.875rem; font-weight: 600;
-    background: var(--accent); color: #000;
-    padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none;
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
+  .hero-sub { font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--text2); max-width: 580px; line-height: 1.75; margin-bottom: 2.5rem; animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; animation: fadeUp 0.6s 0.25s ease both; }
+  .tag { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--text3); background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 0.25rem 0.7rem; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+  .btn-primary { font-family: var(--font-display); font-size: 0.875rem; font-weight: 600; background: var(--accent); color: #000; padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
   .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,229,160,0.25); }
-  .btn-ghost {
-    font-family: var(--font-display); font-size: 0.875rem; font-weight: 600;
-    background: transparent; color: var(--text);
-    border: 1px solid var(--border2);
-    padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
-  }
+  .btn-ghost { font-family: var(--font-display); font-size: 0.875rem; font-weight: 600; background: transparent; color: var(--text); border: 1px solid var(--border2); padding: 0.8rem 1.8rem; border-radius: 6px; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-stats {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-    margin-top: 5rem; max-width: 700px;
-    animation: fadeUp 0.6s 0.4s ease both;
-  }
-  .stat-item {
-    background: var(--bg2); padding: 1.5rem 1.5rem;
-  }
-  .stat-num {
-    font-family: var(--font-display); font-size: 2rem; font-weight: 800;
-    color: var(--accent); letter-spacing: -0.04em; line-height: 1;
-  }
-  .stat-label { font-size: 0.75rem; color: var(--text3); margin-top: 0.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
-
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── SECTIONS ── */
   section { padding: 6rem clamp(1.5rem, 5vw, 5rem); }
-  .section-label {
-    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800; letter-spacing: -0.03em; line-height: 1.1;
-    margin-bottom: 1rem;
-  }
+  .section-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
   .section-sub { color: var(--text2); max-width: 560px; line-height: 1.75; margin-bottom: 3.5rem; }
   hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-  /* ── EXPERIENCE ── */
   #experience { background: var(--bg2); }
   .exp-timeline { display: flex; flex-direction: column; gap: 0; }
-  .exp-item {
-    display: grid; grid-template-columns: 200px 1fr;
-    gap: 2rem; padding: 2.5rem 0;
+
+  .exp-company-block {
     border-bottom: 1px solid var(--border);
-    position: relative;
+    padding: 3rem 0;
   }
-  .exp-item:last-child { border-bottom: none; }
-  .exp-meta { padding-top: 0.1rem; }
-  .exp-period {
-    font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3);
-    letter-spacing: 0.04em; margin-bottom: 0.4rem;
+  .exp-company-block:last-child { border-bottom: none; }
+
+  .exp-company-header {
+    display: grid; grid-template-columns: 200px 1fr;
+    gap: 2rem; margin-bottom: 2rem;
   }
-  .exp-company {
-    font-family: var(--font-display); font-weight: 700; font-size: 0.95rem;
-    color: var(--text2);
-  }
+  .exp-meta-col { padding-top: 0.1rem; }
+  .exp-period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3); letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+  .exp-company-name { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text); }
   .exp-location { font-size: 0.75rem; color: var(--text3); margin-top: 0.2rem; }
-  .exp-header { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
-  .exp-role {
-    font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
-    letter-spacing: -0.02em;
+  .exp-company-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.75; margin-bottom: 1.25rem; }
+
+  .exp-roles { display: flex; flex-direction: column; gap: 1.5rem; }
+  .exp-role-block {
+    background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
+    padding: 1.5rem 1.75rem;
   }
+  .exp-role-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .exp-role-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; }
+  .exp-role-period { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3); letter-spacing: 0.04em; }
   .exp-role-badge {
-    display: inline-block; font-family: var(--font-mono); font-size: 0.68rem;
+    display: inline-block; font-family: var(--font-mono); font-size: 0.65rem;
     letter-spacing: 0.06em; text-transform: uppercase;
     background: var(--accent-dim); color: var(--accent);
     border: 1px solid rgba(0,229,160,0.2); border-radius: 4px;
-    padding: 0.15rem 0.55rem; width: fit-content;
+    padding: 0.15rem 0.55rem; margin-left: auto;
   }
-  .exp-desc { color: var(--text2); font-size: 0.9rem; line-height: 1.75; margin-bottom: 1rem; }
-  .exp-stack {
-    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem;
-  }
-  .chip {
-    font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.03em;
-    color: var(--text3); background: var(--surface);
-    border: 1px solid var(--border); border-radius: 3px;
-    padding: 0.18rem 0.5rem;
-  }
-  .exp-achievements { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
-  .exp-achievements li {
-    font-size: 0.875rem; color: var(--text2); padding-left: 1.25rem; position: relative;
-  }
-  .exp-achievements li::before {
-    content: ''; position: absolute; left: 0; top: 0.55em;
-    width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
-  }
+  .exp-role-badge.amber { background: rgba(245,158,11,0.1); color: var(--amber); border-color: rgba(245,158,11,0.2); }
+
+  .exp-achievements { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.5rem; }
+  .exp-achievements li { font-size: 0.875rem; color: var(--text2); padding-left: 1.25rem; position: relative; }
+  .exp-achievements li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
   .exp-achievements li strong { color: var(--text); font-weight: 500; }
 
-  /* ── SKILLS ── */
-  #skills { background: var(--bg); }
-  .skills-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .skill-card {
-    background: var(--bg2); padding: 1.75rem 1.75rem;
-    transition: background 0.2s;
-  }
-  .skill-card:hover { background: var(--bg3); }
-  .skill-card-icon {
-    font-size: 1.25rem; margin-bottom: 0.75rem;
-    width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-    background: var(--accent-dim); border-radius: 8px;
-    color: var(--accent);
-  }
-  .skill-card-title {
-    font-family: var(--font-display); font-size: 0.9rem; font-weight: 700;
-    letter-spacing: -0.01em; margin-bottom: 1rem;
-  }
-  .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .skill-pill {
-    font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.02em;
-    color: var(--text2); background: var(--surface);
-    border: 1px solid var(--border); border-radius: 3px;
-    padding: 0.2rem 0.55rem;
-  }
-  .skill-pill.highlight {
-    color: var(--accent); background: var(--accent-dim);
-    border-color: rgba(0,229,160,0.2);
-  }
+  .exp-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .chip { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--text3); background: var(--surface); border: 1px solid var(--border); border-radius: 3px; padding: 0.18rem 0.5rem; }
 
-  /* ── PROJECTS ── */
-  #projects { background: var(--bg2); }
-  .projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .project-card {
-    background: var(--bg3); padding: 2rem;
-    transition: background 0.2s; display: flex; flex-direction: column; gap: 1rem;
-  }
-  .project-card:hover { background: var(--surface); }
+  .exp-numbers { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 1.5rem; }
+  .exp-num-item { background: var(--bg); padding: 1rem 1.4rem; flex: 1; min-width: 110px; }
+  .exp-num-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em; line-height: 1; }
+  .exp-num-label { font-size: 0.68rem; color: var(--text3); margin-top: 0.25rem; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; }
+
+  .exp-sub-projects { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .exp-sub-project { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
+  .exp-sub-project-name { font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+  .exp-sub-project p { font-size: 0.825rem; color: var(--text2); line-height: 1.65; }
+
+  #projects { background: var(--bg); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .project-card { background: var(--bg2); padding: 1.75rem; transition: background 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
+  .project-card:hover { background: var(--bg3); }
   .project-top { display: flex; align-items: flex-start; justify-content: space-between; }
-  .project-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-  .project-status {
-    font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px;
-  }
+  .project-icon { width: 40px; height: 40px; border-radius: 9px; background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+  .project-status { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.55rem; border-radius: 4px; }
   .status-live { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.2); }
   .status-shipped { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
-  .project-name {
-    font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em;
-  }
-  .project-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
-  .project-metric {
-    font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);
-    background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.15);
-    padding: 0.4rem 0.8rem; border-radius: 6px; width: fit-content;
-    margin-top: auto;
-  }
+  .status-cancelled { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+  .project-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
+  .project-company { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3); letter-spacing: 0.04em; }
+  .project-desc { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
   .project-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .project-metric { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.15); padding: 0.35rem 0.75rem; border-radius: 5px; width: fit-content; margin-top: auto; }
 
-  /* ── EDUCATION ── */
+  #skills { background: var(--bg2); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .skill-card { background: var(--bg3); padding: 1.75rem; transition: background 0.2s; }
+  .skill-card:hover { background: var(--surface); }
+  .skill-card-icon { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: var(--accent-dim); border-radius: 8px; font-size: 1.1rem; margin-bottom: 0.75rem; }
+  .skill-card-title { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1rem; }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .skill-pill { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.02em; color: var(--text2); background: var(--surface); border: 1px solid var(--border); border-radius: 3px; padding: 0.2rem 0.55rem; }
+  .skill-pill.highlight { color: var(--accent); background: var(--accent-dim); border-color: rgba(0,229,160,0.2); }
+
   #education { background: var(--bg); }
-  .edu-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .edu-card {
-    background: var(--bg2); padding: 1.75rem;
-    display: flex; flex-direction: column; gap: 0.6rem;
-  }
-  .edu-year {
-    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
-    color: var(--text3); text-transform: uppercase;
-  }
-  .edu-degree {
-    font-family: var(--font-display); font-size: 1rem; font-weight: 700;
-    letter-spacing: -0.01em; line-height: 1.3;
-  }
-  .edu-school { font-size: 0.85rem; color: var(--text2); }
-  .edu-note { font-size: 0.8rem; color: var(--text3); line-height: 1.6; }
-  .edu-badge {
-    display: inline-block; font-family: var(--font-mono); font-size: 0.65rem;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    background: rgba(245,158,11,0.1); color: var(--amber);
-    border: 1px solid rgba(245,158,11,0.2); border-radius: 4px;
-    padding: 0.15rem 0.55rem; width: fit-content;
-  }
+  .edu-timeline { display: flex; flex-direction: column; gap: 0; }
+  .edu-item { display: grid; grid-template-columns: 200px 1fr; gap: 2rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+  .edu-item:last-child { border-bottom: none; }
+  .edu-year { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text3); text-transform: uppercase; }
+  .edu-degree { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.3rem; }
+  .edu-school { font-size: 0.875rem; color: var(--text2); margin-bottom: 0.5rem; }
+  .edu-note { font-size: 0.85rem; color: var(--text3); line-height: 1.7; }
+  .edu-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); border-radius: 4px; padding: 0.15rem 0.55rem; width: fit-content; margin-bottom: 0.5rem; }
+  .edu-thesis { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
+  .edu-thesis-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .edu-thesis-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .edu-thesis p { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
+  .edu-thesis ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+  .edu-thesis ul li { font-size: 0.825rem; color: var(--text2); padding-left: 1.1rem; position: relative; }
+  .edu-thesis ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+  .edu-thesis ul li strong { color: var(--text); font-weight: 500; }
+  .edu-tech-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
 
-  /* ── ACHIEVEMENTS ── */
-  #achievements { background: var(--bg2); }
-  .ach-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-  }
-  .ach-card {
-    background: var(--bg3); padding: 1.5rem 1.75rem;
-    display: flex; flex-direction: column; gap: 0.5rem;
-  }
-  .ach-metric {
-    font-family: var(--font-display); font-size: 1.75rem; font-weight: 800;
-    color: var(--accent); letter-spacing: -0.04em; line-height: 1;
-  }
-  .ach-label { font-size: 0.875rem; font-weight: 500; color: var(--text); }
-  .ach-sub { font-size: 0.78rem; color: var(--text3); line-height: 1.5; }
-
-  /* ── CONTACT ── */
-  #contact {
-    background: var(--bg);
-    display: flex; flex-direction: column; align-items: center;
-    text-align: center;
-    padding-top: 7rem; padding-bottom: 7rem;
-  }
+  #contact { background: var(--bg2); display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 7rem; padding-bottom: 7rem; }
   #contact .section-sub { margin-left: auto; margin-right: auto; }
-  .contact-links {
-    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;
-  }
-  .contact-link {
-    font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.04em;
-    color: var(--text2); background: var(--surface);
-    border: 1px solid var(--border2); border-radius: 8px;
-    padding: 0.7rem 1.4rem; text-decoration: none;
-    display: flex; align-items: center; gap: 0.5rem;
-    transition: border-color 0.2s, color 0.2s;
-  }
+  .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+  .contact-link { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.04em; color: var(--text2); background: var(--surface); border: 1px solid var(--border2); border-radius: 8px; padding: 0.7rem 1.4rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: border-color 0.2s, color 0.2s; }
   .contact-link:hover { border-color: var(--accent); color: var(--accent); }
   .contact-link svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 1.5rem clamp(1.5rem, 5vw, 5rem);
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    background: var(--bg);
-  }
+  footer { padding: 1.5rem clamp(1.5rem, 5vw, 5rem); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--bg2); }
   footer p { font-size: 0.8rem; color: var(--text3); }
   footer a { color: var(--accent); text-decoration: none; }
 
-  /* ── SCROLL REVEAL ── */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 768px) {
-    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-company-header, .edu-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .nav-links { display: none; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">J<span>.</span>Martins</a>
   <ul class="nav-links">
@@ -405,19 +216,12 @@
   <a href="mailto:paulino.joaovitor@outlook.com" class="nav-cta">Hire me</a>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-badge">Available for work · Melbourne, AU</div>
-  <h1 class="hero-h1">
-    Senior Backend<br>
-    <span class="line2">Engineer.</span>
-  </h1>
-  <p class="hero-sub">
-    7+ years building high-volume financial systems, distributed architectures and event-driven platforms.
-    Nearly 5 years at XP Investimentos — one of Brazil's largest fintechs — helping build XP Bank from scratch.
-  </p>
+  <h1 class="hero-h1">Senior Backend<br><span class="line2">Engineer.</span></h1>
+  <p class="hero-sub">7+ years building high-volume financial systems, distributed architectures and event-driven platforms. Nearly 5 years at XP Investimentos — one of Brazil's largest fintechs — helping build XP Bank from scratch.</p>
   <div class="hero-tags">
     <span class="tag">C# · ASP.NET Core</span>
     <span class="tag">Distributed Systems</span>
@@ -431,24 +235,6 @@
     <a href="#experience" class="btn-primary">View experience</a>
     <a href="mailto:paulino.joaovitor@outlook.com" class="btn-ghost">Get in touch</a>
   </div>
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-num">7+</div>
-      <div class="stat-label">Years experience</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">R$30B</div>
-      <div class="stat-label">Monthly transfers</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">500/s</div>
-      <div class="stat-label">Peak req/s</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">60k+</div>
-      <div class="stat-label">Accounts launched</div>
-    </div>
-  </div>
 </section>
 
 <hr class="divider">
@@ -457,115 +243,337 @@
 <section id="experience">
   <div class="section-label reveal">Career</div>
   <h2 class="section-title reveal">Professional experience</h2>
-  <p class="section-sub reveal">From scrappy internships in São Paulo to building banking infrastructure at scale — promoted at every role.</p>
+  <p class="section-sub reveal">From a printer repair shop in São Paulo to building core banking infrastructure processing R$30B/month — promoted at every single role.</p>
 
   <div class="exp-timeline">
 
-    <!-- True Blue Labs -->
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-period">2024 – Present</div>
-        <div class="exp-company">True Blue Labs</div>
-        <div class="exp-location">Melbourne, AU</div>
-      </div>
-      <div>
-        <div class="exp-header">
-          <div class="exp-role">Founder & Senior Engineer</div>
-          <div class="exp-role-badge">Founder</div>
+    <!-- TRUE BLUE LABS -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">2024 – Present</div>
+          <div class="exp-company-name">True Blue Labs</div>
+          <div class="exp-location">Melbourne, AU</div>
         </div>
-        <p class="exp-desc">Independent software venture focused on designing and developing scalable, cloud-native SaaS products. Responsible for the full software lifecycle: architecture, implementation, testing and production monitoring.</p>
-        <ul class="exp-achievements">
-          <li>Built <strong>Invoicefy</strong> — a SaaS invoicing platform targeting Australian small businesses, with expansion plans across UK, Canada, NZ and Ireland</li>
-          <li>Serverless-first architecture using <strong>AWS Lambda + RDS PostgreSQL</strong>; pay-per-use with zero idle infrastructure</li>
-          <li>Modular monolith in C# (DDD) designed to evolve into microservices per-domain; dedicated Node.js microservice for PDF rendering</li>
-          <li>Full <strong>Flutter mobile app</strong> (iOS + Android) — first mobile product built end-to-end</li>
-          <li>Banking-grade security: OAuth APIs, S3 signed URLs for documents, strict per-tenant data isolation</li>
-        </ul>
-        <div class="exp-stack">
-          <span class="chip">C# ASP.NET Core</span><span class="chip">Flutter</span><span class="chip">Node.js</span>
-          <span class="chip">AWS Lambda</span><span class="chip">PostgreSQL/RDS</span><span class="chip">Terraform</span><span class="chip">SQS</span>
+        <div>
+          <p class="exp-company-desc">Independent software venture focused on designing and developing scalable, cloud-native SaaS products. Full ownership of the software lifecycle: architecture decisions, implementation, testing and production monitoring.</p>
+          <div class="exp-stack">
+            <span class="chip">C# ASP.NET Core</span><span class="chip">Flutter</span><span class="chip">Node.js</span><span class="chip">AWS Lambda</span><span class="chip">PostgreSQL/RDS</span><span class="chip">Terraform</span><span class="chip">AWS SQS/SES</span><span class="chip">S3</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- XP Investimentos -->
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-period">Jan 2021 – Aug 2025</div>
-        <div class="exp-company">XP Investimentos</div>
-        <div class="exp-location">São Paulo, BR (Hybrid)</div>
-      </div>
-      <div>
-        <div class="exp-header">
-          <div class="exp-role">Backend Engineer</div>
-          <div class="exp-role-badge">Junior → Mid → Senior</div>
-        </div>
-        <p class="exp-desc">Nearly 5 years building XP Bank from scratch — one of Brazil's largest fintechs. Core banking transfer infrastructure covering TED, TEF, PIX, overdraft, salary portability and international accounts.</p>
-        <ul class="exp-achievements">
-          <li>Co-designed and built the entire <strong>TED architecture in under 5 months</strong> — processed <strong>R$40B in first year</strong></li>
-          <li><strong>Feature Leader for Salary Portability</strong> — solo completion of partially built system; served 30,000 clients via CIP/XML integration</li>
-          <li>Implemented <strong>Redis cache for PIX</strong> with Bacen API fallback — reduced client contact rate by <strong>60%+</strong></li>
-          <li>Built <strong>Dynatrace TED telemetry</strong> — cut client contacts during incidents by <strong>90%+</strong></li>
-          <li><strong>Led Overdraft launch</strong> — last major core banking feature; drove <strong>60,000+ new accounts</strong></li>
-          <li>Designed <strong>Transaction Cabin</strong> (dual-approval anti-fraud layer); coordinated external Avanade team as architect</li>
-          <li>Built TED chatbot integration with <strong>OpenAI/ChatGPT</strong>; led war rooms during critical incidents</li>
-          <li>Platform at departure: <strong>R$30B/month, 150 req/s average, 500 req/s load ceiling</strong></li>
-        </ul>
-        <div class="exp-stack">
-          <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">Kafka</span>
-          <span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">SQL Server</span>
-          <span class="chip">DDD</span><span class="chip">Kubernetes</span><span class="chip">Dynatrace</span><span class="chip">OpenAI</span>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Founder & Senior Software Engineer</div>
+            <div class="exp-role-period">2024 – Present</div>
+            <div class="exp-role-badge">Founder</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Built <strong>Invoicefy</strong> — SaaS invoicing platform targeting Australian small businesses, with expansion plans across UK, Canada, NZ and Ireland</li>
+            <li>Serverless-first architecture using <strong>AWS Lambda + RDS PostgreSQL</strong>; pay-per-use with zero idle infrastructure costs</li>
+            <li>Modular monolith in C# (DDD) designed to evolve cleanly into microservices per-domain as demand grows</li>
+            <li>Dedicated <strong>Node.js microservice</strong> for PDF rendering and generation of preview files — responsibility isolated from the main application</li>
+            <li>Full <strong>Flutter mobile app</strong> (iOS + Android) — first mobile product built end-to-end from scratch</li>
+            <li>Banking-grade security: OAuth-protected APIs, AWS S3 with signed URLs for document security, strict per-tenant data isolation</li>
+            <li>Built with intensive use of <strong>AI tools (OpenAI + Claude)</strong> as implementation partners — first project built end-to-end with vibe coding</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">5</div><div class="exp-num-label">Markets targeted</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">iOS+And</div><div class="exp-num-label">Flutter mobile app</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">$0</div><div class="exp-num-label">Idle infrastructure cost</div></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Linx -->
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-period">Mar 2020 – Jan 2021</div>
-        <div class="exp-company">Linx</div>
-        <div class="exp-location">São Paulo, BR (Remote)</div>
-      </div>
-      <div>
-        <div class="exp-header">
-          <div class="exp-role">Software Engineer</div>
-          <div class="exp-role-badge">Junior → Mid-level</div>
+    <!-- XP INVESTIMENTOS -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Jan 2021 – Aug 2025</div>
+          <div class="exp-company-name">XP Investimentos</div>
+          <div class="exp-location">São Paulo, BR (Hybrid)</div>
         </div>
-        <p class="exp-desc">Brazil's leading retail tech company, Shopping Vertical R&D team. Joined during COVID-19 lockdown, shipped two production products.</p>
-        <ul class="exp-achievements">
-          <li>Built <strong>Linx Smart Sales</strong> from greenfield — full e-commerce/marketplace platform for franchise retailers; <strong>live in production today</strong> (Aramis and others)</li>
-          <li><strong>Proposed and implemented Kubernetes migration</strong> from Windows IIS — cost analysis + first production K8s cluster; enabled horizontal scaling previously impossible</li>
-          <li>Migrated codebase from .NET Framework 4.6 to ASP.NET Core (cross-platform)</li>
-          <li>Informally led junior devs; recognised as most experienced technical reference despite junior title</li>
-        </ul>
-        <div class="exp-stack">
-          <span class="chip">C# ASP.NET Core</span><span class="chip">.NET 5</span><span class="chip">React</span>
-          <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Clean Architecture</span>
+        <div>
+          <p class="exp-company-desc">One of Brazil's largest investment and financial services companies — comparable in scale to CommBank or Macquarie in Australia. Joined during the foundational phase of building XP Bank — the full retail banking product did not yet exist. Nearly 5 years. Promoted twice. Digital Account division covering core banking transfer infrastructure.</p>
+          <div class="exp-stack">
+            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">Kafka</span><span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">SQL Server</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Dynatrace</span><span class="chip">Datadog</span><span class="chip">OpenAI API</span><span class="chip">xUnit</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-roles">
+
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Senior Backend Engineer — Product Ownership, Incident Leadership & Platform Reliability</div>
+            <div class="exp-role-period">Apr 2023 – Aug 2025</div>
+            <div class="exp-role-badge">Senior</div>
+          </div>
+          <ul class="exp-achievements">
+            <li><strong>Led the Overdraft Product from concept to production</strong> — one of the last core features for XP's digital banking platform, driving over <strong>60,000 new accounts</strong></li>
+            <li>Improved PIX reliability by implementing <strong>Redis cache as primary source of truth</strong> with fallback to the Brazilian Central Bank API — reduced client contact rate by <strong>60%+</strong></li>
+            <li>Built <strong>Dynatrace telemetry and alerting for TED</strong> — enabled proactive issue detection and cut client contacts during incidents by <strong>90%+</strong></li>
+            <li>Built a <strong>TED request tool integrated with XP's internal chatbot using OpenAI (ChatGPT)</strong> — improved UX and reduced manual support workload</li>
+            <li>Led <strong>incident war rooms</strong>, driving root cause analysis and fast recovery across the Digital Account platform</li>
+            <li>Refactored TED services to support new resilience layers and simplify future instant transfer feature development</li>
+            <li>Led the design of a <strong>backoffice Transaction Cabin</strong> — dual-approval security layer before any transfer dispatch, integrated with the anti-fraud team; designed end-to-end architecture and coordinated a 4-person external Avanade team (3 backend, 1 frontend)</li>
+            <li>Conducted <strong>technical interviews</strong> to help grow the backend engineering team; mentored and onboarded new engineers</li>
+            <li>Reviewed pull requests and owned system documentation for TED processing within XP's tech ecosystem</li>
+            <li>Relocated permanently to Melbourne, Australia — Aug 2025</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">R$30B</div><div class="exp-num-label">Monthly transfers at departure</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">500/s</div><div class="exp-num-label">Peak req/s load ceiling</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">60K+</div><div class="exp-num-label">New accounts — Overdraft</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">90%+</div><div class="exp-num-label">Reduction in incident contacts</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">60%+</div><div class="exp-num-label">Reduction in PIX contacts</div></div>
+          </div>
+        </div>
+
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Mid-level Backend Engineer — Feature Lead, Salary Portability & TED/TEF Evolution</div>
+            <div class="exp-role-period">Aug 2021 – Apr 2023</div>
+            <div class="exp-role-badge">Mid-level</div>
+          </div>
+          <ul class="exp-achievements">
+            <li><strong>Feature Lead for Salary Portability</strong> — full scope from system modernisation to functional expansion; contributing to demand deposit account growth for XP Bank</li>
+            <li>Took over and completed a <strong>partially built Salary Portability project largely solo</strong></li>
+            <li>Integrated with the <strong>Brazilian Interbank Payments Clearing House (CIP)</strong> via XML messaging — orchestrated the full portability lifecycle: requests, status callbacks and push notifications to ~30,000 clients</li>
+            <li>Led onboarding and technical training sessions for new engineers joining the Transfers and Salary Portability teams</li>
+            <li>Created <strong>engineering and support dashboards using Datadog</strong> to monitor key metrics for Salary Portability and TED/TEF platforms</li>
+            <li>Contributed to the <strong>International Account</strong> product — built the currency quote feature in the BFF with Redis cache (5-min TTL) and fallback to external API</li>
+            <li>Designed and built the <strong>event-driven Kafka notification infrastructure</strong> consuming TED lifecycle events (Requested, Scheduled, Cancelled, Settled, Rejected) with three independent consumer groups: receipts, push notifications, mailing — considered one of the best-architected Kafka implementations in the team</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">30K</div><div class="exp-num-label">Clients served</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">3</div><div class="exp-num-label">Kafka consumer groups</div></div>
+          </div>
+        </div>
+
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Junior Backend Engineer — TED/TEF Architecture & Core Banking Foundations</div>
+            <div class="exp-role-period">Jan 2021 – Aug 2021</div>
+            <div class="exp-role-badge">Junior</div>
+          </div>
+          <ul class="exp-achievements">
+            <li><strong>Co-designed and built the entire TED (Brazilian domestic wire transfer) architecture and services in under 5 months</strong></li>
+            <li>Contributed to one of XP's most critical systems: the balance transfer mechanism between investment accounts and digital bank accounts</li>
+            <li>Applied DDD, Clean Architecture and event-driven patterns from day one to ensure scalability, performance and maintainability</li>
+            <li>Developed and maintained the <strong>Backend for Frontend (BFF)</strong> layer feeding mobile and web clients</li>
+            <li>Helped build the <strong>full testing pipeline</strong> — unit, integration, functional and load tests</li>
+            <li>The TED system processed over <strong>R$40B in financial transfers</strong> in its first year since launch</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">5mo</div><div class="exp-num-label">Built from scratch</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">R$40B</div><div class="exp-num-label">Transfers in first year</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HYPESOFT FREELANCE -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Jan 2023 – Aug 2025</div>
+          <div class="exp-company-name">Hypesoft (Freelance)</div>
+          <div class="exp-location">Remote · Brazil</div>
+        </div>
+        <div>
+          <p class="exp-company-desc">Project-based freelance engagements through Hypesoft consultancy, operating as a registered Sole Trader (equivalent to ABN holder in Australia). Ran in parallel with the XP Investimentos role.</p>
+        </div>
+      </div>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Software Engineer (Contractor)</div>
+            <div class="exp-role-period">Jan 2023 – Aug 2025</div>
+            <div class="exp-role-badge">Contract</div>
+          </div>
+          <div class="exp-sub-projects">
+            <div class="exp-sub-project">
+              <div class="exp-sub-project-name">Internal Backoffice ERP — GWM Brazil</div>
+              <p>Contributed to the first ERP system for GWM in Brazil, improving workflows across inventory, logistics and financial operations. Implemented modular backend services using .NET and Clean Architecture. Project cancelled mid-development by the client; payment dispute followed.</p>
+            </div>
+            <div class="exp-sub-project">
+              <div class="exp-sub-project-name">Cashback Platform — Banco Carrefour (VerTem Engine)</div>
+              <p>Developed a cashback platform integrated with Banco Carrefour's mobile ecosystem, powered by the VerTem engine. Built secure, high-throughput APIs for processing cashback events, managing transaction flows and enhancing user engagement. Strong focus on scalability and compliance.</p>
+            </div>
+            <div class="exp-sub-project">
+              <div class="exp-sub-project-name">Webhook Manager — IAudit</div>
+              <p>Designed and implemented a high-volume Webhook Management System. Stack: ASP.NET Core, PostgreSQL, Redis, Azure Service Bus, Angular. Inbound requests immediately enqueued to Service Bus — decoupling ingestion from processing. Retry policies, dead-letter queues and observability pipelines. Load tested at 1,000 req/s with no degradation. Shipped to production.</p>
+            </div>
+          </div>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">1K/s</div><div class="exp-num-label">Webhook load test</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">3</div><div class="exp-num-label">Projects delivered</div></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Sinctec -->
-    <div class="exp-item reveal">
-      <div class="exp-meta">
-        <div class="exp-period">Jun 2018 – Mar 2020</div>
-        <div class="exp-company">Sinctec</div>
-        <div class="exp-location">São Paulo, BR</div>
-      </div>
-      <div>
-        <div class="exp-header">
-          <div class="exp-role">Software Developer</div>
-          <div class="exp-role-badge">Intern → Junior</div>
+    <!-- VEGET -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Jun 2020 – Jan 2021</div>
+          <div class="exp-company-name">Veget</div>
+          <div class="exp-location">São Paulo, BR (Remote)</div>
         </div>
-        <p class="exp-desc">Small software house building ERP and TMS products for logistics. Joined as a mandatory internship, promoted to Junior based on performance.</p>
-        <ul class="exp-achievements">
-          <li>Learned C# and ASP.NET MVC from scratch in a production environment</li>
-          <li>Built a standalone <strong>ETL document import pipeline</strong> from scratch — first end-to-end project with full ownership</li>
-          <li>Self-directed study of Docker, Kubernetes, Golang and design patterns well beyond job scope</li>
-        </ul>
-        <div class="exp-stack">
-          <span class="chip">C#</span><span class="chip">ASP.NET MVC 4.6</span><span class="chip">SQL Server</span>
-          <span class="chip">jQuery</span><span class="chip">LINQ</span>
+        <div>
+          <p class="exp-company-desc">Early-stage startup. Backend architecture contribution during evenings and weekends, in parallel with the Linx role.</p>
+          <div class="exp-stack">
+            <span class="chip">.NET Core</span><span class="chip">Entity Framework Core</span><span class="chip">MediatR</span><span class="chip">PostgreSQL</span><span class="chip">ReactJS</span><span class="chip">DDD</span><span class="chip">CQRS</span><span class="chip">Clean Architecture</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Backend Engineer (Side Project)</div>
+            <div class="exp-role-period">Jun 2020 – Jan 2021</div>
+            <div class="exp-role-badge amber">Side Project</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Designed and developed the <strong>initial backend architecture from scratch</strong> using cloud-native principles</li>
+            <li>Applied <strong>CQRS and DDD</strong> to model core domains with clean separation between reads and writes</li>
+            <li>Collaborated with frontend teams to ensure smooth integration with the React-based UI</li>
+            <li>Product launched and <strong>reached over R$300,000 in monthly revenue</strong> within a short period after delivery</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">R$300K</div><div class="exp-num-label">Monthly revenue after delivery</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINX -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Mar 2020 – Jan 2021</div>
+          <div class="exp-company-name">Linx</div>
+          <div class="exp-location">São Paulo, BR (Remote)</div>
+        </div>
+        <div>
+          <p class="exp-company-desc">One of Brazil's leading retail technology companies. Shopping Vertical R&D team. Joined during the COVID-19 lockdown week, initially as a PJ contractor.</p>
+          <div class="exp-stack">
+            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">.NET 5</span><span class="chip">Entity Framework Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">React</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Mid-level Software Engineer</div>
+            <div class="exp-role-period">Oct 2020 – Jan 2021</div>
+            <div class="exp-role-badge">Mid-level</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Completed and shipped <strong>Linx Smart Sales</strong> to production — product catalogue, inventory, checkout and payments for franchise retailers</li>
+            <li>Informally led junior developers and interns — recognised by management as the most experienced technical reference on the team despite the title</li>
+            <li>Smart Sales <strong>remains live today</strong>, serving Aramis franchises and other retailers</li>
+            <li>Left for a Senior opportunity at XP Investimentos</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">1st</div><div class="exp-num-label">K8s cluster in product line</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">Live</div><div class="exp-num-label">Smart Sales — Aramis today</div></div>
+          </div>
+        </div>
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Junior Software Engineer</div>
+            <div class="exp-role-period">Mar 2020 – Oct 2020</div>
+            <div class="exp-role-badge">Junior</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Worked on maintenance, improvements and reengineering of the <strong>Linx UX ERP system</strong>, a core product in the shopping vertical</li>
+            <li>Started building <strong>Linx Smart Sales</strong> from greenfield — full e-commerce and marketplace platform for franchise retailers</li>
+            <li><strong>Proposed, researched and implemented the migration from Windows IIS to Kubernetes</strong> — cost analysis showing IIS was more expensive and architecturally limiting; first production K8s cluster for this product line</li>
+            <li>Migrated codebase from .NET Framework 4.6 to ASP.NET Core (cross-platform)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SINCTEC -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Jun 2018 – Mar 2020</div>
+          <div class="exp-company-name">Sinctec</div>
+          <div class="exp-location">São Paulo, BR</div>
+        </div>
+        <div>
+          <p class="exp-company-desc">Small software house (~5 developers) building ERP and TMS products for logistics and accounts management. Joined as a mandatory intern tied to the Impacta degree.</p>
+          <div class="exp-stack">
+            <span class="chip">C#</span><span class="chip">ASP.NET MVC 4.6</span><span class="chip">Razor</span><span class="chip">jQuery</span><span class="chip">SQL Server</span><span class="chip">LINQ</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Junior Software Developer</div>
+            <div class="exp-role-period">Jun 2019 – Mar 2020</div>
+            <div class="exp-role-badge">Junior</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Promoted based on technical performance and ownership</li>
+            <li>Built a standalone <strong>document import system from scratch</strong> — ETL pipeline ingesting fixed-format TXT files, transforming to JSON and persisting via REST API. First end-to-end project with full ownership.</li>
+            <li>Left for a <strong>3x salary increase offer from Linx</strong> (R$1,800 → R$5,000)</li>
+          </ul>
+          <div class="exp-numbers">
+            <div class="exp-num-item"><div class="exp-num-val">Intern</div><div class="exp-num-label">Started as intern</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">Junior</div><div class="exp-num-label">Promoted on merit</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">3x</div><div class="exp-num-label">Salary increase on exit</div></div>
+          </div>
+        </div>
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Software Developer — Intern</div>
+            <div class="exp-role-period">Jun 2018 – Jun 2019</div>
+            <div class="exp-role-badge amber">Intern</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Learned C# and ASP.NET MVC from scratch in a production environment</li>
+            <li>Worked across two core products: <strong>Associatec</strong> (ERP for associations and business operations) and <strong>SincLog</strong> (transport management system for logistics and fleet control)</li>
+            <li>Contributed to new feature delivery, performance improvements and bug fixes across multiple modules</li>
+            <li>Participated in code reviews, QA processes and production deployments</li>
+            <li>Self-directed study of design patterns, LINQ-to-SQL, Docker, Kubernetes and Go well beyond job scope</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONOTEC -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <div class="exp-meta-col">
+          <div class="exp-period">Jun 2016 – Jun 2018</div>
+          <div class="exp-company-name">Phonotec</div>
+          <div class="exp-location">São Paulo, BR</div>
+        </div>
+        <div>
+          <p class="exp-company-desc">First formal employment (carteira assinada). Small electronics and printer repair company serving corporate clients including law firms, notary offices and a USP faculty office.</p>
+        </div>
+      </div>
+      <div class="exp-roles">
+        <div class="exp-role-block">
+          <div class="exp-role-header">
+            <div class="exp-role-title">Technician Assistant</div>
+            <div class="exp-role-period">Jun 2016 – Jun 2018</div>
+            <div class="exp-role-badge amber">First job</div>
+          </div>
+          <ul class="exp-achievements">
+            <li>Hardware maintenance: PCB-level repairs, sensor and component replacement, cartridge refilling and toner reconditioning</li>
+            <li>On-site technical visits to corporate clients — assisting senior technicians with installation of heavy equipment</li>
+            <li>Left voluntarily after securing a software development internship at Sinctec — demonstrating consistent drive toward a software engineering career</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -579,85 +587,124 @@
 <section id="projects">
   <div class="section-label reveal">Work</div>
   <h2 class="section-title reveal">Notable projects</h2>
-  <p class="section-sub reveal">A selection of high-impact systems built across fintech, retail and SaaS.</p>
+  <p class="section-sub reveal">High-impact systems built across fintech, retail, SaaS and banking — from greenfield products to core infrastructure serving millions.</p>
 
   <div class="projects-grid">
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">💳</div>
-        <span class="project-status status-live">Live</span>
-      </div>
+      <div class="project-top"><div class="project-icon">💳</div><span class="project-status status-live">Live</span></div>
       <div class="project-name">Invoicefy</div>
-      <p class="project-desc">SaaS invoicing platform for Australian small businesses. Serverless-first on AWS Lambda, Flutter mobile app, modular monolith DDD backend with banking-grade OAuth security.</p>
-      <div class="project-chips">
-        <span class="chip">C#</span><span class="chip">Flutter</span><span class="chip">AWS Lambda</span><span class="chip">Terraform</span>
-      </div>
-      <div class="project-metric">AU market + UK · CA · NZ expansion</div>
+      <div class="project-company">True Blue Labs</div>
+      <p class="project-desc">SaaS invoicing platform for Australian small businesses. Serverless-first on AWS Lambda, Flutter mobile app, modular monolith DDD backend with banking-grade OAuth security and S3 signed URLs.</p>
+      <div class="project-chips"><span class="chip">C#</span><span class="chip">Flutter</span><span class="chip">AWS Lambda</span><span class="chip">PostgreSQL/RDS</span><span class="chip">Terraform</span></div>
+      <div class="project-metric">AU · UK · CA · NZ · IE expansion</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">🏦</div>
-        <span class="project-status status-live">Live</span>
-      </div>
+      <div class="project-top"><div class="project-icon">🏦</div><span class="project-status status-live">Live</span></div>
       <div class="project-name">XP TED/TEF Platform</div>
-      <p class="project-desc">Core Brazilian electronic transfer infrastructure for XP Bank. Built from scratch in under 5 months. Processing R$40B in the first year and R$30B/month at peak.</p>
-      <div class="project-chips">
-        <span class="chip">DDD</span><span class="chip">Kafka</span><span class="chip">Redis</span><span class="chip">Azure</span>
-      </div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Core Brazilian electronic transfer infrastructure for XP Bank. Co-designed and built from scratch in under 5 months. Processed R$40B in the first year and R$30B/month at departure.</p>
+      <div class="project-chips"><span class="chip">DDD</span><span class="chip">Kafka</span><span class="chip">Redis</span><span class="chip">Azure Service Bus</span><span class="chip">Kubernetes</span></div>
       <div class="project-metric">R$30B/month · 500 req/s peak</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">🔁</div>
-        <span class="project-status status-live">Live</span>
-      </div>
+      <div class="project-top"><div class="project-icon">💊</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">PIX — Reliability Improvements</div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Improved PIX system reliability by implementing Redis cache as primary source of truth with automatic fallback to the Bacen API — eliminating latency and downtime spikes for clients.</p>
+      <div class="project-chips"><span class="chip">Redis</span><span class="chip">Bacen API</span><span class="chip">C#</span><span class="chip">ASP.NET Core</span></div>
+      <div class="project-metric">60%+ reduction in client contact rate</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">🔓</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">Overdraft — XP Bank</div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Led the Overdraft product from concept to production — one of the last core features needed to complete XP's digital banking platform. Full product ownership from PBI refinement to launch.</p>
+      <div class="project-chips"><span class="chip">C#</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">SQL Server</span></div>
+      <div class="project-metric">60,000+ new accounts driven</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">🔁</div><span class="project-status status-live">Live</span></div>
       <div class="project-name">Salary Portability — XP</div>
-      <p class="project-desc">Took over and completed a partially built system solo. Full CIP/XML lifecycle integration covering requests, status callbacks and push notifications. Served 30,000 clients.</p>
-      <div class="project-chips">
-        <span class="chip">CIP/XML</span><span class="chip">Kafka</span><span class="chip">Datadog</span>
-      </div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Took over and completed a partially built system largely solo. Full CIP/XML lifecycle integration: requests, status callbacks and push notifications. Kafka notification pipeline with 3 independent consumer groups.</p>
+      <div class="project-chips"><span class="chip">CIP/XML</span><span class="chip">Kafka</span><span class="chip">Datadog</span><span class="chip">DDD</span></div>
       <div class="project-metric">30,000 clients · Feature Leader</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">🛍️</div>
-        <span class="project-status status-live">Live</span>
-      </div>
-      <div class="project-name">Linx Smart Sales</div>
-      <p class="project-desc">Full e-commerce and marketplace platform for franchise retailers built from greenfield. Product catalogue, inventory, checkout, and payments. Live in production serving Aramis and others.</p>
-      <div class="project-chips">
-        <span class="chip">.NET 5</span><span class="chip">K8s</span><span class="chip">Docker</span>
-      </div>
-      <div class="project-metric">In production today — Aramis franchises</div>
+      <div class="project-top"><div class="project-icon">🌐</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">International Account — XP</div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Contributed to the International Account product — built the currency quote feature in the BFF with Redis cache (5-min TTL) and fallback to an external API, improving resilience under load.</p>
+      <div class="project-chips"><span class="chip">BFF Pattern</span><span class="chip">Redis</span><span class="chip">C#</span><span class="chip">ASP.NET Core</span></div>
+      <div class="project-metric">Redis cache + external API fallback</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">🔔</div>
-        <span class="project-status status-shipped">Shipped</span>
-      </div>
+      <div class="project-top"><div class="project-icon">🔐</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">Transaction Cabin — Backoffice</div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Designed a dual-approval security layer before any transfer dispatch, integrated with the anti-fraud team. Designed end-to-end architecture, refined all PBIs, and coordinated a 4-person external Avanade team.</p>
+      <div class="project-chips"><span class="chip">C#</span><span class="chip">DDD</span><span class="chip">Anti-fraud</span><span class="chip">Avanade</span></div>
+      <div class="project-metric">Dual-approval anti-fraud layer</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">📄</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">TED Receipts & Notifications</div>
+      <div class="project-company">XP Investimentos</div>
+      <p class="project-desc">Event-driven notification infrastructure consuming TED lifecycle events from Kafka with three independent consumer groups: receipts generation, push notifications and mailing. Considered one of the best-architected Kafka implementations in the team.</p>
+      <div class="project-chips"><span class="chip">Kafka</span><span class="chip">Event-Driven</span><span class="chip">C#</span><span class="chip">Consumer Groups</span></div>
+      <div class="project-metric">3 consumer groups · Best-in-team architecture</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">💰</div><span class="project-status status-shipped">Shipped</span></div>
+      <div class="project-name">Cashback Platform — Banco Carrefour</div>
+      <div class="project-company">Hypesoft (Freelance)</div>
+      <p class="project-desc">Cashback platform integrated with Banco Carrefour's mobile ecosystem, powered by the VerTem engine. Secure, high-throughput APIs for cashback event processing, transaction flow management and user engagement.</p>
+      <div class="project-chips"><span class="chip">C#</span><span class="chip">VerTem Engine</span><span class="chip">ASP.NET Core</span><span class="chip">Banking APIs</span></div>
+      <div class="project-metric">Carrefour mobile ecosystem</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">🔔</div><span class="project-status status-shipped">Shipped</span></div>
       <div class="project-name">Webhook Manager — IAudit</div>
-      <p class="project-desc">High-volume asynchronous event processing system. Azure Service Bus with retry policies, dead-letter queues and observability. Inbound requests immediately enqueued for decoupled processing.</p>
-      <div class="project-chips">
-        <span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">PostgreSQL</span>
-      </div>
+      <div class="project-company">Hypesoft (Freelance)</div>
+      <p class="project-desc">High-volume async event processing system. Inbound requests immediately enqueued to Azure Service Bus — decoupling ingestion from processing. Retry policies, dead-letter queues and observability. Load tested at 1,000 req/s with no degradation.</p>
+      <div class="project-chips"><span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">PostgreSQL</span><span class="chip">Angular</span></div>
       <div class="project-metric">Load tested at 1,000 req/s</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top">
-        <div class="project-icon">🌿</div>
-        <span class="project-status status-live">Live</span>
-      </div>
+      <div class="project-top"><div class="project-icon">🛍️</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">Linx Smart Sales</div>
+      <div class="project-company">Linx</div>
+      <p class="project-desc">Full e-commerce and marketplace platform for franchise retailers built from greenfield. Product catalogue, inventory, checkout and payments. Proposed and led the Kubernetes migration from Windows IIS. Live in production today serving Aramis and others.</p>
+      <div class="project-chips"><span class="chip">.NET 5</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">React</span></div>
+      <div class="project-metric">In production today — Aramis franchises</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">🏢</div><span class="project-status status-live">Live</span></div>
+      <div class="project-name">Associatec & SincLog</div>
+      <div class="project-company">Sinctec</div>
+      <p class="project-desc">Two core products: Associatec (ERP management software for associations and business operations) and SincLog (TMS for logistics and fleet control). Feature delivery, performance improvements and bug fixes across multiple modules.</p>
+      <div class="project-chips"><span class="chip">C#</span><span class="chip">ASP.NET MVC</span><span class="chip">SQL Server</span><span class="chip">jQuery</span></div>
+      <div class="project-metric">ERP + TMS for logistics</div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-top"><div class="project-icon">🌿</div><span class="project-status status-live">Live</span></div>
       <div class="project-name">Veget — Backend Architecture</div>
-      <p class="project-desc">Side project: designed and built the initial backend from scratch using cloud-native principles, CQRS and DDD. Product launched and reached R$300K/month in revenue after delivery.</p>
-      <div class="project-chips">
-        <span class="chip">.NET Core</span><span class="chip">CQRS</span><span class="chip">PostgreSQL</span>
-      </div>
+      <div class="project-company">Side project</div>
+      <p class="project-desc">Designed and built the initial backend from scratch using cloud-native principles, CQRS and DDD. Clean separation between reads and writes. Product launched and reached R$300K/month in revenue after delivery.</p>
+      <div class="project-chips"><span class="chip">.NET Core</span><span class="chip">CQRS</span><span class="chip">PostgreSQL</span><span class="chip">MediatR</span></div>
       <div class="project-metric">R$300K/month revenue</div>
     </div>
 
@@ -671,121 +718,70 @@
   <div class="section-label reveal">Expertise</div>
   <h2 class="section-title reveal">Technical skills</h2>
   <p class="section-sub reveal">Seven years of production-grade engineering spanning backend, cloud, mobile and distributed systems.</p>
-
   <div class="skills-grid">
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">⚙</div>
       <div class="skill-card-title">Languages</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">C# (Senior)</span>
-        <span class="skill-pill highlight">TypeScript / JS</span>
-        <span class="skill-pill highlight">Dart (Flutter)</span>
-        <span class="skill-pill">Python (Research)</span>
+        <span class="skill-pill highlight">C# (Senior)</span><span class="skill-pill highlight">TypeScript / JS</span><span class="skill-pill highlight">Dart (Flutter)</span><span class="skill-pill">Python (Research)</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">🏗</div>
       <div class="skill-card-title">Architecture</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">DDD</span>
-        <span class="skill-pill highlight">CQRS</span>
-        <span class="skill-pill highlight">Clean Architecture</span>
-        <span class="skill-pill">Hexagonal</span>
-        <span class="skill-pill">Microservices</span>
-        <span class="skill-pill">Modular Monolith</span>
-        <span class="skill-pill">Event-Driven</span>
-        <span class="skill-pill">Saga Pattern</span>
-        <span class="skill-pill">BFF Pattern</span>
+        <span class="skill-pill highlight">DDD</span><span class="skill-pill highlight">CQRS</span><span class="skill-pill highlight">Clean Architecture</span><span class="skill-pill">Hexagonal</span><span class="skill-pill">Microservices</span><span class="skill-pill">Modular Monolith</span><span class="skill-pill">Event-Driven</span><span class="skill-pill">Saga Pattern</span><span class="skill-pill">BFF Pattern</span><span class="skill-pill">Vertical Slice</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">☁</div>
       <div class="skill-card-title">Cloud & Infrastructure</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">AWS Lambda</span>
-        <span class="skill-pill highlight">AWS RDS / S3 / SQS</span>
-        <span class="skill-pill">Azure Service Bus</span>
-        <span class="skill-pill">Azure Functions</span>
-        <span class="skill-pill highlight">Docker</span>
-        <span class="skill-pill highlight">Kubernetes</span>
-        <span class="skill-pill">Terraform</span>
-        <span class="skill-pill">GitHub Actions</span>
-        <span class="skill-pill">Azure DevOps</span>
+        <span class="skill-pill highlight">AWS Lambda</span><span class="skill-pill highlight">AWS RDS / S3 / SQS / SES</span><span class="skill-pill">AWS API Gateway</span><span class="skill-pill">AWS ECS/Fargate</span><span class="skill-pill">AWS Cognito</span><span class="skill-pill">Azure Service Bus</span><span class="skill-pill">Azure Functions</span><span class="skill-pill highlight">Docker</span><span class="skill-pill highlight">Kubernetes</span><span class="skill-pill">Terraform</span><span class="skill-pill">GitHub Actions</span><span class="skill-pill">Azure DevOps</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">📡</div>
       <div class="skill-card-title">Messaging & Streaming</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">Kafka</span>
-        <span class="skill-pill highlight">Azure Service Bus</span>
-        <span class="skill-pill highlight">AWS SQS</span>
-        <span class="skill-pill">RabbitMQ</span>
-        <span class="skill-pill">MassTransit</span>
-        <span class="skill-pill">ActiveMQ</span>
+        <span class="skill-pill highlight">Kafka</span><span class="skill-pill highlight">Azure Service Bus</span><span class="skill-pill highlight">AWS SQS</span><span class="skill-pill">RabbitMQ</span><span class="skill-pill">MassTransit</span><span class="skill-pill">ActiveMQ</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">🗄</div>
       <div class="skill-card-title">Databases</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">PostgreSQL</span>
-        <span class="skill-pill highlight">SQL Server</span>
-        <span class="skill-pill highlight">Redis</span>
-        <span class="skill-pill">MongoDB</span>
-        <span class="skill-pill">Elasticsearch</span>
-        <span class="skill-pill">SQLite</span>
-        <span class="skill-pill">Entity Framework</span>
-        <span class="skill-pill">Dapper</span>
+        <span class="skill-pill highlight">PostgreSQL</span><span class="skill-pill highlight">SQL Server</span><span class="skill-pill highlight">Redis</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Elasticsearch</span><span class="skill-pill">SQLite</span><span class="skill-pill">Entity Framework Core</span><span class="skill-pill">Dapper</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">📊</div>
       <div class="skill-card-title">Observability</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">Dynatrace</span>
-        <span class="skill-pill highlight">Datadog</span>
-        <span class="skill-pill">Grafana</span>
-        <span class="skill-pill">Prometheus</span>
-        <span class="skill-pill">OpenTelemetry</span>
-        <span class="skill-pill">Serilog / NLog</span>
+        <span class="skill-pill highlight">Dynatrace</span><span class="skill-pill highlight">Datadog</span><span class="skill-pill">Grafana</span><span class="skill-pill">Prometheus</span><span class="skill-pill">OpenTelemetry</span><span class="skill-pill">Serilog</span><span class="skill-pill">NLog</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">📱</div>
       <div class="skill-card-title">Frontend & Mobile</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">Flutter / Dart</span>
-        <span class="skill-pill highlight">React / Next.js</span>
-        <span class="skill-pill">Angular</span>
-        <span class="skill-pill">Redux / Zustand</span>
-        <span class="skill-pill">Tailwind CSS</span>
-        <span class="skill-pill">Riverpod</span>
-        <span class="skill-pill">Go Router</span>
+        <span class="skill-pill highlight">Flutter / Dart</span><span class="skill-pill highlight">React / Next.js</span><span class="skill-pill">Angular</span><span class="skill-pill">Redux / Zustand</span><span class="skill-pill">React Query</span><span class="skill-pill">Tailwind CSS</span><span class="skill-pill">Riverpod</span><span class="skill-pill">Go Router</span>
       </div>
     </div>
-
     <div class="skill-card reveal">
       <div class="skill-card-icon">🔒</div>
       <div class="skill-card-title">Security & Patterns</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">OAuth / JWT</span>
-        <span class="skill-pill">OWASP / API Security</span>
-        <span class="skill-pill">Circuit Breaker</span>
-        <span class="skill-pill">Idempotency</span>
-        <span class="skill-pill">Rate Limiting</span>
-        <span class="skill-pill">Event Sourcing</span>
-        <span class="skill-pill">SOLID / GoF Patterns</span>
+        <span class="skill-pill highlight">OAuth / JWT</span><span class="skill-pill">OWASP / API Security</span><span class="skill-pill">Circuit Breaker</span><span class="skill-pill">Idempotency</span><span class="skill-pill">Rate Limiting</span><span class="skill-pill">Event Sourcing</span><span class="skill-pill">SOLID</span><span class="skill-pill">GoF Patterns</span>
       </div>
     </div>
-
+    <div class="skill-card reveal">
+      <div class="skill-card-icon">🧪</div>
+      <div class="skill-card-title">Testing</div>
+      <div class="skill-list">
+        <span class="skill-pill highlight">xUnit</span><span class="skill-pill">NUnit</span><span class="skill-pill">Moq</span><span class="skill-pill">NSubstitute</span><span class="skill-pill">Bogus</span><span class="skill-pill">FluentAssertions</span><span class="skill-pill">WireMock.Net</span><span class="skill-pill">Integration Tests</span><span class="skill-pill">Load Tests</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -797,97 +793,85 @@
   <h2 class="section-title reveal">Education</h2>
   <p class="section-sub reveal">From technical high school in São Paulo to postgraduate research in Melbourne — built on merit and self-direction at every step.</p>
 
-  <div class="edu-grid">
+  <div class="edu-timeline">
 
-    <div class="edu-card reveal">
-      <div class="edu-year">2024 – Present</div>
-      <div class="edu-degree">Master by Research</div>
-      <div class="edu-school">Melbourne, Australia</div>
-      <div class="edu-note">Thesis-based postgraduate research in technology. Full working rights, no hour restrictions. Eligible for 3-year Temporary Graduate Visa (subclass 485) upon completion.</div>
-    </div>
-
-    <div class="edu-card reveal">
-      <div class="edu-year">Mar 2023 – Mar 2024</div>
-      <div class="edu-degree">Pós-Graduação Lato Sensu — Software Architecture</div>
-      <div class="edu-school">FIAP · São Paulo, Brazil</div>
-      <div class="edu-note">Microservices, containerisation, serverless, secure development and cloud-native architecture patterns.</div>
-    </div>
-
-    <div class="edu-card reveal">
-      <div class="edu-year">Jan 2018 – Dec 2021</div>
-      <div class="edu-degree">Information Systems (Bachelor equivalent)</div>
-      <div class="edu-school">Faculdade Impacta de Tecnologia · São Paulo, Brazil</div>
-      <span class="edu-badge">ProUni Full Scholarship</span>
-      <div class="edu-note">Graduated with one of the highest-ranked TCC projects — qualitative analysis of microservices vs monolithic architecture using Event-Driven Architecture and AWS. Supervised by Prof. Osvaldo Takai.</div>
-    </div>
-
-    <div class="edu-card reveal">
-      <div class="edu-year">Jan 2013 – Dec 2015</div>
-      <div class="edu-degree">Técnico em Desenvolvimento de Sistemas</div>
-      <div class="edu-school">ETEC · São Paulo, Brazil</div>
-      <div class="edu-note">Technical high school with software development curriculum. First formal exposure to OOP, databases and systems analysis.</div>
+    <div class="edu-item reveal">
+      <div>
+        <div class="edu-year">2024 – Present</div>
+      </div>
+      <div>
+        <div class="edu-degree">Master by Research</div>
+        <div class="edu-school">Melbourne, Australia · In Progress</div>
+        <div class="edu-note">Thesis-based postgraduate research degree at an Australian university (AQF Level 9). Full working rights with no hour restrictions under Australian immigration law — equivalent to any permanent resident for employment purposes. Upon completion, eligible for a 3-year Temporary Graduate Visa (subclass 485), allowing continued work in Australia.</div>
+        <div class="edu-thesis">
+          <div class="edu-thesis-label">Research Thesis</div>
+          <div class="edu-thesis-title">Geospatial Optimisation of Public Transport Infrastructure Using Machine Learning and Victorian Growth Data</div>
+          <p>The research focuses on identifying the most impactful locations for new bus, train and tram stations across Victoria, Australia. The project uses publicly available data from the Victorian Government on projected population growth, urban density and land use patterns — combined with geospatial analysis and machine learning — to recommend optimal transport infrastructure placements.</p>
+          <ul>
+            <li>Uses <strong>Victorian Government datasets</strong> on population growth projections and planned development corridors</li>
+            <li>Applies <strong>machine learning models</strong> to identify underserved areas with the highest future transport demand</li>
+            <li>Produces an <strong>interactive geospatial map</strong> visualising recommended bus, tram and train station locations across the state</li>
+            <li>Combines GIS data, demographic modelling and network analysis to generate evidence-based infrastructure recommendations</li>
+            <li>Aims to support urban planning decision-making by translating complex spatial data into clear, actionable visualisations</li>
+          </ul>
+          <div class="edu-tech-tags">
+            <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">GIS / Geospatial Analysis</span><span class="chip">Interactive Maps</span><span class="chip">Victorian Gov Data</span><span class="chip">Network Analysis</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="edu-card reveal">
-      <div class="edu-year">ENEM 2016 & 2017</div>
-      <div class="edu-degree">Vestibular Results</div>
-      <div class="edu-school">UFSC · USP São Carlos · ProUni</div>
-      <span class="edu-badge">Merit-based achievements</span>
-      <div class="edu-note">Scored high enough to enter UFSC (2016) and USP São Carlos (2017). Secured a ProUni full scholarship to Impacta — chosen for proximity and immediate employment access.</div>
+    <div class="edu-item reveal">
+      <div>
+        <div class="edu-year">Mar 2023 – Mar 2024</div>
+      </div>
+      <div>
+        <div class="edu-degree">Postgraduate Specialisation — Software Architecture</div>
+        <div class="edu-school">FIAP · São Paulo, Brazil · Equivalent to a Graduate Certificate (AQF Level 8) in Australian qualifications</div>
+        <div class="edu-note">One-year postgraduate specialisation. Deepened knowledge in microservices and containerisation, serverless applications, secure development, project standards and cloud-native architecture patterns. Hands-on application projects throughout.</div>
+      </div>
     </div>
 
-  </div>
-</section>
+    <div class="edu-item reveal">
+      <div>
+        <div class="edu-year">Jan 2018 – Dec 2021</div>
+      </div>
+      <div>
+        <span class="edu-badge">Brazilian Federal Full Scholarship (ProUni)</span>
+        <div class="edu-degree">Bachelor of Information Systems</div>
+        <div class="edu-school">Faculdade Impacta de Tecnologia · São Paulo, Brazil · Recognised as equivalent to an Australian Bachelor's degree (AQF Level 7) by the ACS</div>
+        <div class="edu-note">Four-year degree. Graduated with one of the highest-ranked TCC projects in the cohort, supervised by Professor Osvaldo Takai.</div>
+        <div class="edu-thesis">
+          <div class="edu-thesis-label">Final Project (TCC)</div>
+          <div class="edu-thesis-title">Microservices vs Monolithic Architecture — A Qualitative Analysis Using Event-Driven Architecture and AWS</div>
+          <p>Comparative qualitative analysis of microservices and monolithic architectures in the context of event-driven systems on AWS. The technical depth and research rigour of this work directly contributed to securing Master by Research admission in Australia years later.</p>
+        </div>
+      </div>
+    </div>
 
-<hr class="divider">
+    <div class="edu-item reveal">
+      <div>
+        <div class="edu-year">Jan 2013 – Dec 2015</div>
+      </div>
+      <div>
+        <div class="edu-degree">Technical Diploma — Systems Development</div>
+        <div class="edu-school">ETEC · São Paulo, Brazil · Equivalent to an Australian Certificate IV in Information Technology</div>
+        <div class="edu-note">Technical high school integrated with software development curriculum. Covered programming fundamentals, OOP, databases and systems analysis alongside core subjects. First formal exposure to software engineering.</div>
+      </div>
+    </div>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="section-label reveal">Impact</div>
-  <h2 class="section-title reveal">Key achievements</h2>
-  <p class="section-sub reveal">Numbers that define the scale of systems built and problems solved.</p>
+    <div class="edu-item reveal">
+      <div>
+        <div class="edu-year">2016 – 2017</div>
+      </div>
+      <div>
+        <span class="edu-badge">Merit-based university entry results</span>
+        <div class="edu-degree">National University Entry Exams (ENEM)</div>
+        <div class="edu-school">UFSC · USP São Carlos · Federal Scholarship Program</div>
+        <div class="edu-note">2016 — scored high enough to qualify for UFSC (Federal University of Santa Catarina), one of Brazil's top-ranked public universities. Did not attend due to financial constraints of relocating interstate. 2017 — scored high enough to qualify for USP São Carlos (University of São Paulo), Brazil's most prestigious university. Also secured a full federal scholarship (ProUni) to study Information Systems at Impacta — chosen for proximity and the ability to enter the workforce immediately.</div>
+      </div>
+    </div>
 
-  <div class="ach-grid">
-    <div class="ach-card reveal">
-      <div class="ach-metric">R$40B</div>
-      <div class="ach-label">TED transfers in first year</div>
-      <div class="ach-sub">XP Bank · built from scratch in under 5 months</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">R$30B</div>
-      <div class="ach-label">Monthly transfers at departure</div>
-      <div class="ach-sub">XP Bank · 150 req/s avg · 500 req/s ceiling</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">60%+</div>
-      <div class="ach-label">Reduction in PIX client contacts</div>
-      <div class="ach-sub">Redis cache + Bacen API fallback implementation</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">90%+</div>
-      <div class="ach-label">Reduction in TED incident contacts</div>
-      <div class="ach-sub">Dynatrace telemetry and alerting system</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">60K+</div>
-      <div class="ach-label">New accounts driven</div>
-      <div class="ach-sub">XP Bank Overdraft product launch</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">30K</div>
-      <div class="ach-label">Clients served solo</div>
-      <div class="ach-sub">Salary Portability — Feature Leader</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">1K/s</div>
-      <div class="ach-label">Webhook Manager load test</div>
-      <div class="ach-sub">IAudit · Azure Service Bus · no degradation</div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-metric">R$300K</div>
-      <div class="ach-label">Monthly revenue — Veget</div>
-      <div class="ach-sub">Side project backend · reached after delivery</div>
-    </div>
   </div>
 </section>
 
@@ -921,8 +905,8 @@
 
 <script>
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.08 });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.06 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
