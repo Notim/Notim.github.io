@@ -3,7 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>João Martins — Senior Software Engineer</title>
+<title>João Paranhos — Senior Software Engineer</title>
+<meta name="description" content="Senior Software Engineer with 8+ years building commercial software across fintech, SaaS and ERP. Nearly 5 years at XP Inc. (NASDAQ: XP) building XP Bank's core banking APIs from greenfield. Based in Melbourne, AU.">
+<meta name="keywords" content="senior software engineer, fintech, distributed systems, C#, .NET, Kafka, Azure, AWS, DDD, CQRS, Melbourne">
+<meta name="author" content="João Vitor Paranhos Martins">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://notim.github.io">
+<meta property="og:title" content="João Paranhos — Senior Software Engineer">
+<meta property="og:description" content="8+ years building high-volume financial systems and event-driven platforms. Nearly 5 years at XP Inc. (NASDAQ). Based in Melbourne, AU.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "João Vitor Paranhos Martins",
+  "jobTitle": "Senior Software Engineer",
+  "url": "https://notim.github.io",
+  "email": "paulino.joaovitor@outlook.com",
+  "telephone": "+61431416744",
+  "sameAs": ["https://linkedin.com/in/joao-paranhos", "https://github.com/notim"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "Victoria", "addressCountry": "Australia" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -85,57 +106,44 @@
 
   #experience { background: var(--bg2); }
   .exp-timeline { display: flex; flex-direction: column; gap: 0; }
-
-  .exp-company-block {
-    border-bottom: 1px solid var(--border);
-    padding: 3rem 0;
-  }
+  .exp-company-block { border-bottom: 1px solid var(--border); padding: 3rem 0; }
   .exp-company-block:last-child { border-bottom: none; }
-
-  .exp-company-header {
-    display: grid; grid-template-columns: 200px 1fr;
-    gap: 2rem; margin-bottom: 2rem;
-  }
+  .exp-company-header { display: grid; grid-template-columns: 200px 1fr; gap: 2rem; margin-bottom: 2rem; }
   .exp-meta-col { padding-top: 0.1rem; }
   .exp-period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3); letter-spacing: 0.04em; margin-bottom: 0.4rem; }
   .exp-company-name { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--text); }
   .exp-location { font-size: 0.75rem; color: var(--text3); margin-top: 0.2rem; }
   .exp-company-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.75; margin-bottom: 1.25rem; }
-
   .exp-roles { display: flex; flex-direction: column; gap: 1.5rem; }
-  .exp-role-block {
-    background: var(--bg3); border: 1px solid var(--border); border-radius: 10px;
-    padding: 1.5rem 1.75rem;
-  }
+  .exp-role-block { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.75rem; }
   .exp-role-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
   .exp-role-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.02em; }
   .exp-role-period { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3); letter-spacing: 0.04em; }
-  .exp-role-badge {
-    display: inline-block; font-family: var(--font-mono); font-size: 0.65rem;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    background: var(--accent-dim); color: var(--accent);
-    border: 1px solid rgba(0,229,160,0.2); border-radius: 4px;
-    padding: 0.15rem 0.55rem; margin-left: auto;
-  }
+  .exp-role-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(0,229,160,0.2); border-radius: 4px; padding: 0.15rem 0.55rem; margin-left: auto; }
   .exp-role-badge.amber { background: rgba(245,158,11,0.1); color: var(--amber); border-color: rgba(245,158,11,0.2); }
-
   .exp-achievements { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.5rem; }
   .exp-achievements li { font-size: 0.875rem; color: var(--text2); padding-left: 1.25rem; position: relative; }
   .exp-achievements li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
   .exp-achievements li strong { color: var(--text); font-weight: 500; }
-
   .exp-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
   .chip { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--text3); background: var(--surface); border: 1px solid var(--border); border-radius: 3px; padding: 0.18rem 0.5rem; }
-
   .exp-numbers { display: flex; flex-wrap: wrap; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 1.5rem; }
   .exp-num-item { background: var(--bg); padding: 1rem 1.4rem; flex: 1; min-width: 110px; }
   .exp-num-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em; line-height: 1; }
   .exp-num-label { font-size: 0.68rem; color: var(--text3); margin-top: 0.25rem; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; }
-
   .exp-sub-projects { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
   .exp-sub-project { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
   .exp-sub-project-name { font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
   .exp-sub-project p { font-size: 0.825rem; color: var(--text2); line-height: 1.65; }
+
+  #skills { background: var(--bg2); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .skill-card { background: var(--bg3); padding: 1.75rem; transition: background 0.2s; }
+  .skill-card:hover { background: var(--surface); }
+  .skill-card-title { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1rem; }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .skill-pill { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.02em; color: var(--text2); background: var(--surface); border: 1px solid var(--border); border-radius: 3px; padding: 0.2rem 0.55rem; }
+  .skill-pill.highlight { color: var(--accent); background: var(--accent-dim); border-color: rgba(0,229,160,0.2); }
 
   #projects { background: var(--bg); }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -146,22 +154,11 @@
   .project-status { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.55rem; border-radius: 4px; }
   .status-live { background: rgba(0,229,160,0.1); color: var(--accent); border: 1px solid rgba(0,229,160,0.2); }
   .status-shipped { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
-  .status-cancelled { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
   .project-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; }
   .project-company { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3); letter-spacing: 0.04em; }
   .project-desc { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
   .project-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .project-metric { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(0,229,160,0.15); padding: 0.35rem 0.75rem; border-radius: 5px; width: fit-content; margin-top: auto; }
-
-  #skills { background: var(--bg2); }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-  .skill-card { background: var(--bg3); padding: 1.75rem; transition: background 0.2s; }
-  .skill-card:hover { background: var(--surface); }
-  .skill-card-icon { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: var(--accent-dim); border-radius: 8px; font-size: 1.1rem; margin-bottom: 0.75rem; }
-  .skill-card-title { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1rem; }
-  .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .skill-pill { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.02em; color: var(--text2); background: var(--surface); border: 1px solid var(--border); border-radius: 3px; padding: 0.2rem 0.55rem; }
-  .skill-pill.highlight { color: var(--accent); background: var(--accent-dim); border-color: rgba(0,229,160,0.2); }
 
   #education { background: var(--bg); }
   .edu-timeline { display: flex; flex-direction: column; gap: 0; }
@@ -176,10 +173,6 @@
   .edu-thesis-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
   .edu-thesis-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
   .edu-thesis p { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
-  .edu-thesis ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
-  .edu-thesis ul li { font-size: 0.825rem; color: var(--text2); padding-left: 1.1rem; position: relative; }
-  .edu-thesis ul li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
-  .edu-thesis ul li strong { color: var(--text); font-weight: 500; }
   .edu-tech-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
 
   #contact { background: var(--bg2); display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 7rem; padding-bottom: 7rem; }
@@ -205,7 +198,7 @@
 <body>
 
 <nav>
-  <a href="#hero" class="nav-logo">J<span>.</span>Martins</a>
+  <a href="#hero" class="nav-logo">J<span>.</span>Paranhos</a>
   <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -216,20 +209,21 @@
   <a href="mailto:paulino.joaovitor@outlook.com" class="nav-cta">Hire me</a>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
-  <div class="hero-badge">Available for work · Melbourne, AU</div>
+  <div class="hero-badge">Available for work · Melbourne, AU · Full working rights</div>
   <h1 class="hero-h1">Senior Software<br><span class="line2">Engineer.</span></h1>
-  <p class="hero-sub">7+ years building high-volume financial systems, distributed architectures and event-driven platforms. Nearly 5 years at XP Investimentos — one of Brazil's largest fintechs — helping build XP Bank from scratch.</p>
+  <p class="hero-sub">8+ years building commercial software across fintech, SaaS and ERP. Nearly 5 years at XP Inc. (NASDAQ: XP) building XP Bank's core banking APIs from greenfield — a transfer platform processing R$30–40B/month under Banco Central do Brasil oversight.</p>
   <div class="hero-tags">
-    <span class="tag">C# · ASP.NET Core</span>
-    <span class="tag">Distributed Systems</span>
+    <span class="tag">C# · .NET 8+</span>
     <span class="tag">Event-Driven · Kafka</span>
-    <span class="tag">AWS · Azure</span>
+    <span class="tag">Azure · AWS</span>
     <span class="tag">DDD · CQRS</span>
+    <span class="tag">Microservices</span>
     <span class="tag">Fintech · Banking</span>
-    <span class="tag">Flutter</span>
+    <span class="tag">Flutter · Node.js</span>
   </div>
   <div class="hero-actions">
     <a href="#experience" class="btn-primary">View experience</a>
@@ -239,10 +233,11 @@
 
 <hr class="divider">
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label reveal">Career</div>
   <h2 class="section-title reveal">Professional experience</h2>
-  <p class="section-sub reveal">From a printer repair shop in São Paulo to building core banking infrastructure processing R$30B/month — promoted at every single role.</p>
+  <p class="section-sub reveal">11+ years in technology, 8+ building commercial software. Promoted at every single role — from intern to senior.</p>
 
   <div class="exp-timeline">
 
@@ -250,54 +245,48 @@
     <div class="exp-company-block reveal">
       <div class="exp-company-header">
         <div class="exp-meta-col">
-          <div class="exp-period">2024 – Present</div>
+          <div class="exp-period">Dec 2025 – Present</div>
           <div class="exp-company-name">True Blue Labs</div>
           <div class="exp-location">Melbourne, AU</div>
         </div>
         <div>
-          <p class="exp-company-desc">Independent software studio focused on designing and developing scalable, cloud-native SaaS products. Full ownership of the software lifecycle: architecture decisions, implementation, testing and production monitoring.</p>
+          <p class="exp-company-desc">Personal SaaS project. Sole engineer on a serverless-first SaaS invoicing platform for English-speaking markets. Full lifecycle ownership — architecture, API development, CI/CD, mobile, production monitoring. Built end-to-end using Claude / Claude Code and GitHub Copilot as AI engineering co-pilots.</p>
           <div class="exp-stack">
-            <span class="chip">C# ASP.NET Core</span><span class="chip">Flutter</span><span class="chip">Node.js</span><span class="chip">AWS Lambda</span><span class="chip">PostgreSQL/RDS</span><span class="chip">Terraform</span><span class="chip">AWS SQS/SES</span><span class="chip">S3</span>
+            <span class="chip">C# ASP.NET Core</span><span class="chip">AWS Lambda</span><span class="chip">RDS PostgreSQL</span><span class="chip">S3 / SQS / SES</span><span class="chip">Node.js</span><span class="chip">Flutter</span><span class="chip">Terraform</span><span class="chip">GitHub Actions</span>
           </div>
         </div>
       </div>
       <div class="exp-roles">
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Senior Software Engineer</div>
-            <div class="exp-role-period">2024 – Present</div>
-            <div class="exp-role-badge">Senior</div>
+            <div class="exp-role-title">Solo Developer — Personal Project (Invoicefy SaaS)</div>
+            <div class="exp-role-period">Dec 2025 – Present</div>
+            <div class="exp-role-badge">Personal Project</div>
           </div>
           <ul class="exp-achievements">
-            <li>Built <strong>Invoicefy</strong> — SaaS invoicing platform targeting Australian small businesses, with expansion plans across UK, Canada, NZ and Ireland</li>
-            <li>Serverless-first architecture using <strong>AWS Lambda + RDS PostgreSQL</strong>; pay-per-use with zero idle infrastructure costs</li>
-            <li>Modular monolith in C# (DDD) designed to evolve cleanly into microservices per-domain as demand grows</li>
-            <li>Dedicated <strong>Node.js microservice</strong> for PDF rendering and generation of preview files — responsibility isolated from the main application</li>
-            <li>Full <strong>Flutter mobile app</strong> (iOS + Android) — first mobile product built end-to-end from scratch</li>
-            <li>Banking-grade security: OAuth-protected APIs, AWS S3 with signed URLs for document security, strict per-tenant data isolation</li>
-            <li>Built with intensive use of <strong>AI tools (OpenAI + Claude)</strong> as implementation partners — first project built end-to-end with vibe coding</li>
+            <li>Designed and built a <strong>serverless-first API platform on AWS</strong> (Lambda, RDS PostgreSQL, S3, SQS, SES) with zero idle infrastructure; provisioned entirely via Terraform IaC and GitHub Actions CI/CD with automated test integration</li>
+            <li>Architected the backend as a <strong>modular monolith in C# ASP.NET Core partitioned by DDD bounded contexts</strong>, exposing RESTful APIs with structured error handling, OpenAPI documentation and OAuth security — designed to decompose into microservices per domain as demand grows</li>
+            <li>Built a dedicated <strong>Node.js microservice for PDF rendering</strong> and preview generation, isolating that concern from the core application behind a clean API contract</li>
+            <li>Implemented <strong>banking-grade API security</strong>: OAuth token validation, S3 signed URLs preventing cross-tenant document access, strict per-tenant data isolation at every API and database layer</li>
+            <li>Applied <strong>structured agentic AI workflows (setup-plan-act)</strong> using Claude / Claude Code and GitHub Copilot — led code generation, review and refactoring with AI tools while maintaining architectural standards and quality gates</li>
+            <li>Delivered <strong>Flutter mobile app (iOS and Android)</strong> as a consumer of the core APIs — first mobile product built from scratch, covering full customer experience end-to-end</li>
           </ul>
-          <div class="exp-numbers">
-            <div class="exp-num-item"><div class="exp-num-val">5</div><div class="exp-num-label">Markets targeted</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">iOS+And</div><div class="exp-num-label">Flutter mobile app</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">$0</div><div class="exp-num-label">Idle infrastructure cost</div></div>
-          </div>
         </div>
       </div>
     </div>
 
-    <!-- XP INVESTIMENTOS -->
+    <!-- XP INC -->
     <div class="exp-company-block reveal">
       <div class="exp-company-header">
         <div class="exp-meta-col">
-          <div class="exp-period">Jan 2021 – Aug 2025</div>
-          <div class="exp-company-name">XP Investimentos</div>
+          <div class="exp-period">Jan 2021 – Sep 2025</div>
+          <div class="exp-company-name">XP Inc. (NASDAQ: XP)</div>
           <div class="exp-location">São Paulo, BR (Hybrid)</div>
         </div>
         <div>
-          <p class="exp-company-desc">One of Brazil's largest investment and financial services companies — comparable in scale to CommBank or Macquarie in Australia. Joined during the foundational phase of building XP Bank — the full retail banking product did not yet exist. Nearly 5 years. Promoted twice. Digital Account division covering core banking transfer infrastructure.</p>
+          <p class="exp-company-desc">One of Brazil's largest investment and financial services companies. Joined to build XP Bank's core banking APIs from greenfield. Promoted from Junior to Senior in roughly two years — recognised for delivering business outcomes on a regulated core-banking platform.</p>
           <div class="exp-stack">
-            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">Kafka</span><span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">SQL Server</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Dynatrace</span><span class="chip">Datadog</span><span class="chip">OpenAI API</span><span class="chip">xUnit</span>
+            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">Kafka</span><span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">SQL Server</span><span class="chip">AKS</span><span class="chip">Dynatrace</span><span class="chip">Datadog</span><span class="chip">OpenAI API</span><span class="chip">xUnit</span><span class="chip">K6</span>
           </div>
         </div>
       </div>
@@ -305,111 +294,102 @@
 
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Senior Backend Engineer — Product Ownership, Incident Leadership & Platform Reliability</div>
-            <div class="exp-role-period">Apr 2023 – Aug 2025</div>
+            <div class="exp-role-title">Senior Software Engineer</div>
+            <div class="exp-role-period">Apr 2023 – Sep 2025</div>
             <div class="exp-role-badge">Senior</div>
           </div>
           <ul class="exp-achievements">
-            <li><strong>Led the Overdraft Product from concept to production</strong> — one of the last core features for XP's digital banking platform, driving over <strong>60,000 new accounts</strong></li>
-            <li>Improved PIX reliability by implementing <strong>Redis cache as primary source of truth</strong> with fallback to the Brazilian Central Bank API — reduced client contact rate by <strong>60%+</strong></li>
-            <li>Built <strong>Dynatrace telemetry and alerting for TED</strong> — enabled proactive issue detection and cut client contacts during incidents by <strong>90%+</strong></li>
-            <li>Built a <strong>TED request tool integrated with XP's internal chatbot using OpenAI (ChatGPT)</strong> — improved UX and reduced manual support workload</li>
-            <li>Led <strong>incident war rooms</strong>, driving root cause analysis and fast recovery across the Digital Account platform</li>
-            <li>Refactored TED services to support new resilience layers and simplify future instant transfer feature development</li>
-            <li>Led the design of a <strong>backoffice Transaction Cabin</strong> — dual-approval security layer before any transfer dispatch, integrated with the anti-fraud team; designed end-to-end architecture and coordinated a 4-person external Avanade team (3 backend, 1 frontend)</li>
-            <li>Conducted <strong>technical interviews</strong> to help grow the backend engineering team; mentored and onboarded new engineers</li>
-            <li>Reviewed pull requests and owned system documentation for TED processing within XP's tech ecosystem</li>
-            <li>Relocated permanently to Melbourne, Australia — Aug 2025</li>
+            <li><strong>Owned end-to-end design and delivery of the Overdraft Product API</strong> — one of the last core features required to complete XP Bank — driving <strong>60,000+ new accounts</strong> at launch; full ownership from API contract through production monitoring</li>
+            <li>Improved PIX API reliability by implementing <strong>Redis cache as primary source of truth</strong> with fallback to the Bacen external API — <strong>reduced client contact rate by 60%+</strong>; designed the cache invalidation and consistency strategy</li>
+            <li>Architected and delivered the <strong>Transaction Cabin backoffice API</strong> — a dual-approval security layer before any transfer dispatch; owned end-to-end API design and coordinated a 4-person external Avanade team (3 backend, 1 frontend) as the sole internal technical lead</li>
+            <li>Built <strong>Dynatrace telemetry and alerting</strong> across the TED transfer API platform — enabled proactive issue detection and <strong>cut client contacts during incidents by 90%+</strong>; defined alerting thresholds, dashboards and engineering runbooks</li>
+            <li>Integrated <strong>OpenAI API into XP's chatbot platform</strong> to expose a natural-language TED request interface — improved UX and reduced manual support load across the Digital Account operations team</li>
+            <li>Led <strong>War Rooms during critical production incidents</strong> — drove root cause analysis and coordinated cross-team fast recovery; authored post-mortems and introduced resilience patterns (Circuit Breaker, Retry via Polly)</li>
+            <li>Conducted <strong>technical interviews</strong>; reviewed pull requests and maintained API design and code quality standards across squads; mentored junior engineers on EDA, DDD and C# patterns</li>
+            <li>Platform at departure: <strong>R$30–40B/month</strong> in processed transfers, sustaining <strong>150 req/s average TPS</strong> with a load-tested ceiling of <strong>500 req/s</strong> and zero degradation</li>
           </ul>
           <div class="exp-numbers">
-            <div class="exp-num-item"><div class="exp-num-val">R$30B</div><div class="exp-num-label">Monthly transfers at departure</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">500/s</div><div class="exp-num-label">Peak req/s load ceiling</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">R$40B</div><div class="exp-num-label">Monthly transfers at departure</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">500/s</div><div class="exp-num-label">Load-tested peak ceiling</div></div>
             <div class="exp-num-item"><div class="exp-num-val">60K+</div><div class="exp-num-label">New accounts — Overdraft</div></div>
             <div class="exp-num-item"><div class="exp-num-val">90%+</div><div class="exp-num-label">Reduction in incident contacts</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">60%+</div><div class="exp-num-label">Reduction in PIX contacts</div></div>
           </div>
         </div>
 
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Mid-level Backend Engineer — Feature Lead, Salary Portability & TED/TEF Evolution</div>
+            <div class="exp-role-title">Mid-level Software Engineer</div>
             <div class="exp-role-period">Aug 2021 – Apr 2023</div>
             <div class="exp-role-badge">Mid-level</div>
           </div>
           <ul class="exp-achievements">
-            <li><strong>Feature Lead for Salary Portability</strong> — full scope from system modernisation to functional expansion; contributing to demand deposit account growth for XP Bank</li>
-            <li>Took over and completed a <strong>partially built Salary Portability project largely solo</strong></li>
-            <li>Integrated with the <strong>Brazilian Interbank Payments Clearing House (CIP)</strong> via XML messaging — orchestrated the full portability lifecycle: requests, status callbacks and push notifications to ~30,000 clients</li>
-            <li>Led onboarding and technical training sessions for new engineers joining the Transfers and Salary Portability teams</li>
-            <li>Created <strong>engineering and support dashboards using Datadog</strong> to monitor key metrics for Salary Portability and TED/TEF platforms</li>
-            <li>Contributed to the <strong>International Account</strong> product — built the currency quote feature in the BFF with Redis cache (5-min TTL) and fallback to external API</li>
-            <li>Designed and built the <strong>event-driven Kafka notification infrastructure</strong> consuming TED lifecycle events (Requested, Scheduled, Cancelled, Settled, Rejected) with three independent consumer groups: receipts, push notifications, mailing — considered one of the best-architected Kafka implementations in the team</li>
+            <li>Acted as <strong>Feature Leader for the entire Salary Portability API scope</strong> — from system modernisation to functional expansion, serving <strong>30,000 clients</strong>; integrated with CIP (Brazilian clearing infrastructure) via XML messaging protocol and orchestrated the full lifecycle across request, callback and push notification APIs</li>
+            <li>Designed and built the <strong>event-driven notification API infrastructure</strong> consuming TED lifecycle events from Kafka with three independent consumer groups (receipts, push notifications, mailing) — <strong>recognised by the team as the best-architected Kafka consumer group implementation on the platform</strong></li>
+            <li>Contributed to the <strong>International Account product</strong> — built the currency quote API in the BFF layer with Redis cache plus external API fallback; built and maintained Datadog dashboards for Salary Portability and TED/TEF platforms</li>
+            <li>Led onboarding and technical training sessions for new engineers; wrote and maintained automated test suites covering unit, integration, functional and load test scenarios</li>
           </ul>
           <div class="exp-numbers">
-            <div class="exp-num-item"><div class="exp-num-val">30K</div><div class="exp-num-label">Clients served</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">30K</div><div class="exp-num-label">Clients — Salary Portability</div></div>
             <div class="exp-num-item"><div class="exp-num-val">3</div><div class="exp-num-label">Kafka consumer groups</div></div>
           </div>
         </div>
 
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Junior Backend Engineer — TED/TEF Architecture & Core Banking Foundations</div>
+            <div class="exp-role-title">Junior Software Engineer</div>
             <div class="exp-role-period">Jan 2021 – Aug 2021</div>
-            <div class="exp-role-badge">Junior</div>
+            <div class="exp-role-badge amber">Junior</div>
           </div>
           <ul class="exp-achievements">
-            <li><strong>Co-designed and built the entire TED (Brazilian domestic wire transfer) architecture and services in under 5 months</strong></li>
-            <li>Contributed to one of XP's most critical systems: the balance transfer mechanism between investment accounts and digital bank accounts</li>
-            <li>Applied DDD, Clean Architecture and event-driven patterns from day one to ensure scalability, performance and maintainability</li>
-            <li>Developed and maintained the <strong>Backend for Frontend (BFF)</strong> layer feeding mobile and web clients</li>
-            <li>Helped build the <strong>full testing pipeline</strong> — unit, integration, functional and load tests</li>
-            <li>The TED system processed over <strong>R$40B in financial transfers</strong> in its first year since launch</li>
+            <li><strong>Co-designed and built the entire TED (electronic bank transfer) API architecture and services from greenfield in under 5 months</strong> using DDD, Clean Architecture and Event-Driven Architecture — the system processed R$40B+ in its first year</li>
+            <li>Developed and maintained the <strong>BFF (Backend for Frontend) API layer</strong> feeding mobile and web clients; built the full automated testing pipeline: unit, integration, functional and load tests via K6</li>
+            <li>Promoted to Mid-level Software Engineer after 7 months — Aug 2021</li>
           </ul>
           <div class="exp-numbers">
-            <div class="exp-num-item"><div class="exp-num-val">5mo</div><div class="exp-num-label">Built from scratch</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">R$40B</div><div class="exp-num-label">Transfers in first year</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">5mo</div><div class="exp-num-label">TED built from scratch</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">R$40B+</div><div class="exp-num-label">Transfers in first year</div></div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- HYPESOFT FREELANCE -->
+    <!-- HYPESOFT -->
     <div class="exp-company-block reveal">
       <div class="exp-company-header">
         <div class="exp-meta-col">
-          <div class="exp-period">Jan 2023 – Aug 2025</div>
-          <div class="exp-company-name">Hypesoft (Freelance)</div>
-          <div class="exp-location">Remote · Brazil</div>
+          <div class="exp-period">Mar 2023 – Dec 2023</div>
+          <div class="exp-company-name">Hypesoft Consultancy</div>
+          <div class="exp-location">Remote, Brazil (parallel to XP Inc.)</div>
         </div>
         <div>
-          <p class="exp-company-desc">Project-based freelance engagements through Hypesoft consultancy, operating as a registered Sole Trader (equivalent to ABN holder in Australia). Ran in parallel with the XP Investimentos role.</p>
+          <p class="exp-company-desc">Three concurrent client API deliveries across ERP, fintech and webhook infrastructure — running in parallel with the XP Inc. role.</p>
         </div>
       </div>
       <div class="exp-roles">
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Software Engineer (Contractor)</div>
-            <div class="exp-role-period">Jan 2023 – Aug 2025</div>
+            <div class="exp-role-title">Software Engineer — Contractor</div>
+            <div class="exp-role-period">Mar 2023 – Dec 2023</div>
             <div class="exp-role-badge">Contract</div>
           </div>
           <div class="exp-sub-projects">
             <div class="exp-sub-project">
-              <div class="exp-sub-project-name">Internal Backoffice ERP — GWM Brazil</div>
-              <p>Contributed to the first ERP system for GWM in Brazil, improving workflows across inventory, logistics and financial operations. Implemented modular backend services using .NET and Clean Architecture. Project cancelled mid-development by the client; payment dispute followed.</p>
-            </div>
-            <div class="exp-sub-project">
-              <div class="exp-sub-project-name">Cashback Platform — Banco Carrefour (VerTem Engine)</div>
-              <p>Developed a cashback platform integrated with Banco Carrefour's mobile ecosystem, powered by the VerTem engine. Built secure, high-throughput APIs for processing cashback events, managing transaction flows and enhancing user engagement. Strong focus on scalability and compliance.</p>
-            </div>
-            <div class="exp-sub-project">
               <div class="exp-sub-project-name">Webhook Manager — IAudit</div>
-              <p>Designed and implemented a high-volume Webhook Management System. Stack: ASP.NET Core, PostgreSQL, Redis, Azure Service Bus, Angular. Inbound requests immediately enqueued to Service Bus — decoupling ingestion from processing. Retry policies, dead-letter queues and observability pipelines. Load tested at 1,000 req/s with no degradation. Shipped to production.</p>
+              <p>Designed and implemented a high-volume Webhook Management API (ASP.NET Core, Azure Service Bus, PostgreSQL, Redis, Angular). Ingestion decoupled from processing via Service Bus; automatic retry, dead-letter queues and observability pipelines. Load tested at 1,000 req/s without degradation — shipped to production.</p>
+            </div>
+            <div class="exp-sub-project">
+              <div class="exp-sub-project-name">Cashback System — Banco Carrefour</div>
+              <p>Built secure, high-throughput cashback APIs integrated with Banco Carrefour's mobile ecosystem via the VerTem engine. Transaction flow management with strong scalability and compliance focus.</p>
+            </div>
+            <div class="exp-sub-project">
+              <div class="exp-sub-project-name">ERP Backoffice — GWM Brazil</div>
+              <p>Contributed API development for the first ERP system for GWM in Brazil (inventory, logistics, financial workflows) using .NET Clean Architecture; participated in requirements workshops translating business needs into technical API solutions.</p>
             </div>
           </div>
           <div class="exp-numbers">
             <div class="exp-num-item"><div class="exp-num-val">1K/s</div><div class="exp-num-label">Webhook load test</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">3</div><div class="exp-num-label">Projects delivered</div></div>
+            <div class="exp-num-item"><div class="exp-num-val">3</div><div class="exp-num-label">Client deliveries</div></div>
           </div>
         </div>
       </div>
@@ -420,28 +400,28 @@
       <div class="exp-company-header">
         <div class="exp-meta-col">
           <div class="exp-period">Jun 2020 – Jan 2021</div>
-          <div class="exp-company-name">Veget</div>
-          <div class="exp-location">São Paulo, BR (Remote)</div>
+          <div class="exp-company-name">Veget AgriTech</div>
+          <div class="exp-location">São Paulo, BR (Remote — parallel to Linx)</div>
         </div>
         <div>
-          <p class="exp-company-desc">Early-stage startup. Backend architecture contribution during evenings and weekends, in parallel with the Linx role.</p>
+          <p class="exp-company-desc">Early-stage agritech startup. Contributed to the backend during evenings and weekends alongside the Linx role, building the platform's initial architecture from greenfield as a cloud-native, event-driven system.</p>
           <div class="exp-stack">
-            <span class="chip">.NET Core</span><span class="chip">Entity Framework Core</span><span class="chip">MediatR</span><span class="chip">PostgreSQL</span><span class="chip">ReactJS</span><span class="chip">DDD</span><span class="chip">CQRS</span><span class="chip">Clean Architecture</span>
+            <span class="chip">C# .NET Core</span><span class="chip">Entity Framework Core</span><span class="chip">MediatR</span><span class="chip">PostgreSQL</span><span class="chip">CQRS</span><span class="chip">DDD</span><span class="chip">React</span>
           </div>
         </div>
       </div>
       <div class="exp-roles">
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Backend Engineer (Side Project)</div>
+            <div class="exp-role-title">Software Engineer — Side Project</div>
             <div class="exp-role-period">Jun 2020 – Jan 2021</div>
             <div class="exp-role-badge amber">Side Project</div>
           </div>
           <ul class="exp-achievements">
-            <li>Designed and developed the <strong>initial backend architecture from scratch</strong> using cloud-native principles</li>
-            <li>Applied <strong>CQRS and DDD</strong> to model core domains with clean separation between reads and writes</li>
-            <li>Collaborated with frontend teams to ensure smooth integration with the React-based UI</li>
-            <li>Product launched and <strong>reached over R$300,000 in monthly revenue</strong> within a short period after delivery</li>
+            <li>Designed and built the <strong>initial backend architecture from scratch</strong> in C# .NET Core using cloud-native principles, with full ownership of the technical design</li>
+            <li>Applied <strong>CQRS and DDD</strong> to model the core domains with clean separation between reads and writes; built on .NET Core, Entity Framework Core, MediatR and PostgreSQL</li>
+            <li>Collaborated with the frontend team to ensure smooth integration with the React-based UI</li>
+            <li>Product launched and <strong>reached over R$300,000/month in revenue</strong> within a short period after delivery</li>
           </ul>
           <div class="exp-numbers">
             <div class="exp-num-item"><div class="exp-num-val">R$300K</div><div class="exp-num-label">Monthly revenue after delivery</div></div>
@@ -455,46 +435,32 @@
       <div class="exp-company-header">
         <div class="exp-meta-col">
           <div class="exp-period">Mar 2020 – Jan 2021</div>
-          <div class="exp-company-name">Linx</div>
-          <div class="exp-location">São Paulo, BR (Remote)</div>
+          <div class="exp-company-name">Linx S.A.</div>
+          <div class="exp-location">São Paulo, BR</div>
         </div>
         <div>
-          <p class="exp-company-desc">One of Brazil's leading retail technology companies. Shopping Vertical R&D team. Joined during the COVID-19 lockdown week, initially as a PJ contractor.</p>
+          <p class="exp-company-desc">One of Brazil's leading retail technology companies (NYSE: LINX — acquired by StoneCo, NASDAQ: STNE, for US$1.28B). Built ERP and e-commerce API platform for franchise retailers; progressed from Junior to Mid-level within the tenure.</p>
           <div class="exp-stack">
-            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">.NET 5</span><span class="chip">Entity Framework Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">React</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+            <span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">.NET Framework 4.6 → Core migration</span>
           </div>
         </div>
       </div>
       <div class="exp-roles">
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Mid-level Software Engineer</div>
-            <div class="exp-role-period">Oct 2020 – Jan 2021</div>
+            <div class="exp-role-title">Software Engineer</div>
+            <div class="exp-role-period">Mar 2020 – Jan 2021</div>
             <div class="exp-role-badge">Mid-level</div>
           </div>
           <ul class="exp-achievements">
-            <li>Completed and shipped <strong>Linx Smart Sales</strong> to production — product catalogue, inventory, checkout and payments for franchise retailers</li>
-            <li>Informally led junior developers and interns — recognised by management as the most experienced technical reference on the team despite the title</li>
-            <li>Smart Sales <strong>remains live today</strong>, serving Aramis franchises and other retailers</li>
-            <li>Left for a Senior opportunity at XP Investimentos</li>
+            <li>Built <strong>Linx Smart Sales API platform from greenfield</strong> — product catalogue, inventory, checkout and payments APIs for franchise retailers; product remains live today serving Aramis franchises and other retail chains</li>
+            <li>Proposed and implemented <strong>migration from Windows IIS to Kubernetes</strong> — cost analysis demonstrated IIS licensing overhead; enabled horizontal API scaling previously impossible; first production K8s cluster for this product line; also migrated codebase from .NET Framework 4.6 to ASP.NET Core</li>
+            <li>Led junior developers as the most experienced technical reference on the team; <strong>promoted to Mid-level after 7 months</strong></li>
           </ul>
           <div class="exp-numbers">
             <div class="exp-num-item"><div class="exp-num-val">1st</div><div class="exp-num-label">K8s cluster in product line</div></div>
             <div class="exp-num-item"><div class="exp-num-val">Live</div><div class="exp-num-label">Smart Sales — Aramis today</div></div>
           </div>
-        </div>
-        <div class="exp-role-block">
-          <div class="exp-role-header">
-            <div class="exp-role-title">Junior Software Engineer</div>
-            <div class="exp-role-period">Mar 2020 – Oct 2020</div>
-            <div class="exp-role-badge">Junior</div>
-          </div>
-          <ul class="exp-achievements">
-            <li>Worked on maintenance, improvements and reengineering of the <strong>Linx UX ERP system</strong>, a core product in the shopping vertical</li>
-            <li>Started building <strong>Linx Smart Sales</strong> from greenfield — full e-commerce and marketplace platform for franchise retailers</li>
-            <li><strong>Proposed, researched and implemented the migration from Windows IIS to Kubernetes</strong> — cost analysis showing IIS was more expensive and architecturally limiting; first production K8s cluster for this product line</li>
-            <li>Migrated codebase from .NET Framework 4.6 to ASP.NET Core (cross-platform)</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -508,9 +474,9 @@
           <div class="exp-location">São Paulo, BR</div>
         </div>
         <div>
-          <p class="exp-company-desc">Small software house (~5 developers) building ERP and TMS products for logistics and accounts management. Joined as a mandatory intern tied to the Impacta degree.</p>
+          <p class="exp-company-desc">Software house (~5 developers) building ERP and TMS APIs for logistics and accounts management.</p>
           <div class="exp-stack">
-            <span class="chip">C#</span><span class="chip">ASP.NET MVC 4.6</span><span class="chip">Razor</span><span class="chip">jQuery</span><span class="chip">SQL Server</span><span class="chip">LINQ</span>
+            <span class="chip">C#</span><span class="chip">ASP.NET MVC</span><span class="chip">SQL Server</span><span class="chip">LINQ</span>
           </div>
         </div>
       </div>
@@ -518,32 +484,12 @@
         <div class="exp-role-block">
           <div class="exp-role-header">
             <div class="exp-role-title">Junior Software Developer</div>
-            <div class="exp-role-period">Jun 2019 – Mar 2020</div>
-            <div class="exp-role-badge">Junior</div>
+            <div class="exp-role-period">Jun 2018 – Mar 2020</div>
+            <div class="exp-role-badge amber">Junior → Intern</div>
           </div>
           <ul class="exp-achievements">
-            <li>Promoted based on technical performance and ownership</li>
-            <li>Built a standalone <strong>document import system from scratch</strong> — ETL pipeline ingesting fixed-format TXT files, transforming to JSON and persisting via REST API. First end-to-end project with full ownership.</li>
-            <li>Left for a <strong>3x salary increase offer from Linx</strong> (R$1,800 → R$5,000)</li>
-          </ul>
-          <div class="exp-numbers">
-            <div class="exp-num-item"><div class="exp-num-val">Intern</div><div class="exp-num-label">Started as intern</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">Junior</div><div class="exp-num-label">Promoted on merit</div></div>
-            <div class="exp-num-item"><div class="exp-num-val">3x</div><div class="exp-num-label">Salary increase on exit</div></div>
-          </div>
-        </div>
-        <div class="exp-role-block">
-          <div class="exp-role-header">
-            <div class="exp-role-title">Software Developer — Intern</div>
-            <div class="exp-role-period">Jun 2018 – Jun 2019</div>
-            <div class="exp-role-badge amber">Intern</div>
-          </div>
-          <ul class="exp-achievements">
-            <li>Learned C# and ASP.NET MVC from scratch in a production environment</li>
-            <li>Worked across two core products: <strong>Associatec</strong> (ERP for associations and business operations) and <strong>SincLog</strong> (transport management system for logistics and fleet control)</li>
-            <li>Contributed to new feature delivery, performance improvements and bug fixes across multiple modules</li>
-            <li>Participated in code reviews, QA processes and production deployments</li>
-            <li>Self-directed study of design patterns, LINQ-to-SQL, Docker, Kubernetes and Go well beyond job scope</li>
+            <li>Built a <strong>standalone document import ETL API system from scratch</strong> — ingesting fixed-format TXT files, transforming to JSON and persisting via REST API; designed and implemented a CI/CD pipeline automating deployments, replacing manual uploads</li>
+            <li>Contributed feature delivery, performance improvements and bug fixes across <strong>Associatec (ERP)</strong> and <strong>SincLog (TMS for logistics and fleet control)</strong>; promoted from intern to Junior Developer after 12 months</li>
           </ul>
         </div>
       </div>
@@ -558,20 +504,18 @@
           <div class="exp-location">São Paulo, BR</div>
         </div>
         <div>
-          <p class="exp-company-desc">First formal employment (carteira assinada). Small electronics and printer repair company serving corporate clients including law firms, notary offices and a USP faculty office.</p>
+          <p class="exp-company-desc">IT services company providing hardware maintenance and technical support to corporate clients. First formal role.</p>
         </div>
       </div>
       <div class="exp-roles">
         <div class="exp-role-block">
           <div class="exp-role-header">
-            <div class="exp-role-title">Technician Assistant</div>
+            <div class="exp-role-title">IT Technician Assistant</div>
             <div class="exp-role-period">Jun 2016 – Jun 2018</div>
-            <div class="exp-role-badge amber">First job</div>
+            <div class="exp-role-badge amber">First role</div>
           </div>
           <ul class="exp-achievements">
-            <li>Hardware maintenance: PCB-level repairs, sensor and component replacement, cartridge refilling and toner reconditioning</li>
-            <li>On-site technical visits to corporate clients — assisting senior technicians with installation of heavy equipment</li>
-            <li>Left voluntarily after securing a software development internship at Sinctec — demonstrating consistent drive toward a software engineering career</li>
+            <li>Performed <strong>PCB-level hardware repairs</strong>, component replacement and on-site technical visits across corporate client sites; first exposure to operational technology environments and client service accountability</li>
           </ul>
         </div>
       </div>
@@ -582,128 +526,39 @@
 
 <hr class="divider">
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-label reveal">Work</div>
-  <h2 class="section-title reveal">Notable projects</h2>
-  <p class="section-sub reveal">High-impact systems built across fintech, retail, SaaS and banking — from greenfield products to core infrastructure serving millions.</p>
+  <h2 class="section-title reveal">Academic & capstone projects</h2>
+  <p class="section-sub reveal">Production-grade systems built for academic capstones — demonstrating architectural depth beyond commercial work.</p>
 
   <div class="projects-grid">
 
     <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">💳</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Invoicefy</div>
-      <div class="project-company">True Blue Labs</div>
-      <p class="project-desc">SaaS invoicing platform for Australian small businesses. Serverless-first on AWS Lambda, Flutter mobile app, modular monolith DDD backend with banking-grade OAuth security and S3 signed URLs.</p>
-      <div class="project-chips"><span class="chip">C#</span><span class="chip">Flutter</span><span class="chip">AWS Lambda</span><span class="chip">PostgreSQL/RDS</span><span class="chip">Terraform</span></div>
-      <div class="project-metric">AU · UK · CA · NZ · IE expansion</div>
+      <div class="project-top"><div class="project-icon">🚌</div><span class="project-status status-live">In Progress</span></div>
+      <div class="project-name">Applied AI — Urban Mobility Planning</div>
+      <div class="project-company">Master by Research Thesis · HELI Melbourne</div>
+      <p class="project-desc">Applying geospatial machine learning to public transport planning across growing suburbs of Victoria. Thesis: "AI Applied to Planning Public Transportation Systems Based on Growing Suburbs Data."</p>
+      <div class="project-chips"><span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">GIS / Geospatial</span><span class="chip">Victorian Gov Data</span><span class="chip">Network Analysis</span></div>
+      <div class="project-metric">Master by Research · Jun 2026 – Present</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🏦</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">XP TED/TEF Platform</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Core Brazilian electronic transfer infrastructure for XP Bank. Co-designed and built from scratch in under 5 months. Processed R$40B in the first year and R$30B/month at departure.</p>
-      <div class="project-chips"><span class="chip">DDD</span><span class="chip">Kafka</span><span class="chip">Redis</span><span class="chip">Azure Service Bus</span><span class="chip">Kubernetes</span></div>
-      <div class="project-metric">R$30B/month · 500 req/s peak</div>
+      <div class="project-top"><div class="project-icon">🚗</div><span class="project-status status-shipped">Shipped</span></div>
+      <div class="project-name">Internet Motors — EDA Platform</div>
+      <div class="project-company">FIAP Postgraduate Capstone (Individual) · Mar 2023 – Mar 2024</div>
+      <p class="project-desc">End-to-end vehicle resale platform demonstrating production-grade Event-Driven API Architecture, Saga orchestration, CQRS and Azure cloud-native deployment. Designed and built entirely solo.</p>
+      <div class="project-chips"><span class="chip">C# Microservices</span><span class="chip">Kafka</span><span class="chip">MassTransit</span><span class="chip">AKS</span><span class="chip">APIM</span><span class="chip">Auth0</span><span class="chip">MongoDB</span><span class="chip">Redis</span></div>
+      <div class="project-metric">5 microservices · Saga · ADR-backed</div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">💊</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">PIX — Reliability Improvements</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Improved PIX system reliability by implementing Redis cache as primary source of truth with automatic fallback to the Bacen API — eliminating latency and downtime spikes for clients.</p>
-      <div class="project-chips"><span class="chip">Redis</span><span class="chip">Bacen API</span><span class="chip">C#</span><span class="chip">ASP.NET Core</span></div>
-      <div class="project-metric">60%+ reduction in client contact rate</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🔓</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Overdraft — XP Bank</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Led the Overdraft product from concept to production — one of the last core features needed to complete XP's digital banking platform. Full product ownership from PBI refinement to launch.</p>
-      <div class="project-chips"><span class="chip">C#</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">SQL Server</span></div>
-      <div class="project-metric">60,000+ new accounts driven</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🔁</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Salary Portability — XP</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Took over and completed a partially built system largely solo. Full CIP/XML lifecycle integration: requests, status callbacks and push notifications. Kafka notification pipeline with 3 independent consumer groups.</p>
-      <div class="project-chips"><span class="chip">CIP/XML</span><span class="chip">Kafka</span><span class="chip">Datadog</span><span class="chip">DDD</span></div>
-      <div class="project-metric">30,000 clients · Feature Leader</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🌐</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">International Account — XP</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Contributed to the International Account product — built the currency quote feature in the BFF with Redis cache (5-min TTL) and fallback to an external API, improving resilience under load.</p>
-      <div class="project-chips"><span class="chip">BFF Pattern</span><span class="chip">Redis</span><span class="chip">C#</span><span class="chip">ASP.NET Core</span></div>
-      <div class="project-metric">Redis cache + external API fallback</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🔐</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Transaction Cabin — Backoffice</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Designed a dual-approval security layer before any transfer dispatch, integrated with the anti-fraud team. Designed end-to-end architecture, refined all PBIs, and coordinated a 4-person external Avanade team.</p>
-      <div class="project-chips"><span class="chip">C#</span><span class="chip">DDD</span><span class="chip">Anti-fraud</span><span class="chip">Avanade</span></div>
-      <div class="project-metric">Dual-approval anti-fraud layer</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">📄</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">TED Receipts & Notifications</div>
-      <div class="project-company">XP Investimentos</div>
-      <p class="project-desc">Event-driven notification infrastructure consuming TED lifecycle events from Kafka with three independent consumer groups: receipts generation, push notifications and mailing. Considered one of the best-architected Kafka implementations in the team.</p>
-      <div class="project-chips"><span class="chip">Kafka</span><span class="chip">Event-Driven</span><span class="chip">C#</span><span class="chip">Consumer Groups</span></div>
-      <div class="project-metric">3 consumer groups · Best-in-team architecture</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">💰</div><span class="project-status status-shipped">Shipped</span></div>
-      <div class="project-name">Cashback Platform — Banco Carrefour</div>
-      <div class="project-company">Hypesoft (Freelance)</div>
-      <p class="project-desc">Cashback platform integrated with Banco Carrefour's mobile ecosystem, powered by the VerTem engine. Secure, high-throughput APIs for cashback event processing, transaction flow management and user engagement.</p>
-      <div class="project-chips"><span class="chip">C#</span><span class="chip">VerTem Engine</span><span class="chip">ASP.NET Core</span><span class="chip">Banking APIs</span></div>
-      <div class="project-metric">Carrefour mobile ecosystem</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🔔</div><span class="project-status status-shipped">Shipped</span></div>
-      <div class="project-name">Webhook Manager — IAudit</div>
-      <div class="project-company">Hypesoft (Freelance)</div>
-      <p class="project-desc">High-volume async event processing system. Inbound requests immediately enqueued to Azure Service Bus — decoupling ingestion from processing. Retry policies, dead-letter queues and observability. Load tested at 1,000 req/s with no degradation.</p>
-      <div class="project-chips"><span class="chip">Azure Service Bus</span><span class="chip">Redis</span><span class="chip">PostgreSQL</span><span class="chip">Angular</span></div>
-      <div class="project-metric">Load tested at 1,000 req/s</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🛍️</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Linx Smart Sales</div>
-      <div class="project-company">Linx</div>
-      <p class="project-desc">Full e-commerce and marketplace platform for franchise retailers built from greenfield. Product catalogue, inventory, checkout and payments. Proposed and led the Kubernetes migration from Windows IIS. Live in production today serving Aramis and others.</p>
-      <div class="project-chips"><span class="chip">.NET 5</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">React</span></div>
-      <div class="project-metric">In production today — Aramis franchises</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🏢</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Associatec & SincLog</div>
-      <div class="project-company">Sinctec</div>
-      <p class="project-desc">Two core products: Associatec (ERP management software for associations and business operations) and SincLog (TMS for logistics and fleet control). Feature delivery, performance improvements and bug fixes across multiple modules.</p>
-      <div class="project-chips"><span class="chip">C#</span><span class="chip">ASP.NET MVC</span><span class="chip">SQL Server</span><span class="chip">jQuery</span></div>
-      <div class="project-metric">ERP + TMS for logistics</div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-top"><div class="project-icon">🌿</div><span class="project-status status-live">Live</span></div>
-      <div class="project-name">Veget — Backend Architecture</div>
-      <div class="project-company">Side project</div>
-      <p class="project-desc">Designed and built the initial backend from scratch using cloud-native principles, CQRS and DDD. Clean separation between reads and writes. Product launched and reached R$300K/month in revenue after delivery.</p>
-      <div class="project-chips"><span class="chip">.NET Core</span><span class="chip">CQRS</span><span class="chip">PostgreSQL</span><span class="chip">MediatR</span></div>
-      <div class="project-metric">R$300K/month revenue</div>
+      <div class="project-top"><div class="project-icon">🔬</div><span class="project-status status-shipped">Shipped</span></div>
+      <div class="project-name">Microservices vs Monolithic Research</div>
+      <div class="project-company">Impacta Bachelor Capstone (Lead Contributor) · 2021</div>
+      <p class="project-desc">Experimental research study quantitatively comparing microservices and monolithic API architectures under K6 load testing. Ranked among the top TCCs of the cohort. Supervised by Prof. Osvaldo Takai.</p>
+      <div class="project-chips"><span class="chip">Python</span><span class="chip">AWS Lambda</span><span class="chip">AMQP</span><span class="chip">K6 Load Testing</span><span class="chip">MySQL</span></div>
+      <div class="project-metric">3x throughput · 78% lower latency · 0% vs 21% error rate</div>
     </div>
 
   </div>
@@ -711,107 +566,185 @@
 
 <hr class="divider">
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-label reveal">Expertise</div>
   <h2 class="section-title reveal">Technical skills</h2>
-  <p class="section-sub reveal">Seven years of production-grade engineering spanning backend, cloud, mobile and distributed systems.</p>
+  <p class="section-sub reveal">Primary stack: C# / .NET 8+ with strong Node.js and frontend experience across Azure and AWS.</p>
   <div class="skills-grid">
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">⚙</div>
-      <div class="skill-card-title">Languages</div>
+      <div class="skill-card-title">API Development</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">C# (Senior)</span><span class="skill-pill highlight">TypeScript / JS</span><span class="skill-pill highlight">Dart (Flutter)</span><span class="skill-pill">Python (Research)</span>
+        <span class="skill-pill highlight">C#</span>
+        <span class="skill-pill highlight">.NET Core / .NET 8+</span>
+        <span class="skill-pill highlight">ASP.NET Core Web APIs</span>
+        <span class="skill-pill highlight">Node.js</span>
+        <span class="skill-pill">GraphQL</span>
+        <span class="skill-pill">REST APIs</span>
+        <span class="skill-pill">gRPC</span>
+        <span class="skill-pill">WebSockets</span>
+        <span class="skill-pill">Swagger / OpenAPI</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">🏗</div>
-      <div class="skill-card-title">Architecture</div>
+      <div class="skill-card-title">Architecture Patterns</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">DDD</span><span class="skill-pill highlight">CQRS</span><span class="skill-pill highlight">Clean Architecture</span><span class="skill-pill">Hexagonal</span><span class="skill-pill">Microservices</span><span class="skill-pill">Modular Monolith</span><span class="skill-pill">Event-Driven</span><span class="skill-pill">Saga Pattern</span><span class="skill-pill">BFF Pattern</span><span class="skill-pill">Vertical Slice</span>
+        <span class="skill-pill highlight">DDD</span>
+        <span class="skill-pill highlight">CQRS</span>
+        <span class="skill-pill highlight">Clean Architecture</span>
+        <span class="skill-pill highlight">Event-Driven Architecture</span>
+        <span class="skill-pill">Microservices</span>
+        <span class="skill-pill">Modular Monolith</span>
+        <span class="skill-pill">BFF Pattern</span>
+        <span class="skill-pill">Saga Pattern</span>
+        <span class="skill-pill">Anti-Corruption Layer</span>
+        <span class="skill-pill">Circuit Breaker / Retry</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">☁</div>
-      <div class="skill-card-title">Cloud & Infrastructure</div>
+      <div class="skill-card-title">Azure (Primary Cloud)</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">AWS Lambda</span><span class="skill-pill highlight">AWS RDS / S3 / SQS / SES</span><span class="skill-pill">AWS API Gateway</span><span class="skill-pill">AWS ECS/Fargate</span><span class="skill-pill">AWS Cognito</span><span class="skill-pill">Azure Service Bus</span><span class="skill-pill">Azure Functions</span><span class="skill-pill highlight">Docker</span><span class="skill-pill highlight">Kubernetes</span><span class="skill-pill">Terraform</span><span class="skill-pill">GitHub Actions</span><span class="skill-pill">Azure DevOps</span>
+        <span class="skill-pill highlight">AKS</span>
+        <span class="skill-pill highlight">Azure Functions</span>
+        <span class="skill-pill highlight">Azure Service Bus</span>
+        <span class="skill-pill highlight">APIM</span>
+        <span class="skill-pill">App Services</span>
+        <span class="skill-pill">Blob Storage</span>
+        <span class="skill-pill">Key Vault</span>
+        <span class="skill-pill">App Configuration</span>
+        <span class="skill-pill">Azure DevOps</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">📡</div>
+      <div class="skill-card-title">AWS</div>
+      <div class="skill-list">
+        <span class="skill-pill highlight">Lambda</span>
+        <span class="skill-pill highlight">RDS (PostgreSQL / SQL Server)</span>
+        <span class="skill-pill highlight">S3</span>
+        <span class="skill-pill highlight">SQS</span>
+        <span class="skill-pill">SES</span>
+        <span class="skill-pill">API Gateway</span>
+        <span class="skill-pill">ECS / Fargate</span>
+        <span class="skill-pill">CloudWatch</span>
+        <span class="skill-pill">Secrets Manager</span>
+        <span class="skill-pill">Cognito</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
       <div class="skill-card-title">Messaging & Streaming</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">Kafka</span><span class="skill-pill highlight">Azure Service Bus</span><span class="skill-pill highlight">AWS SQS</span><span class="skill-pill">RabbitMQ</span><span class="skill-pill">MassTransit</span><span class="skill-pill">ActiveMQ</span>
+        <span class="skill-pill highlight">Kafka (Confluent)</span>
+        <span class="skill-pill highlight">Azure Service Bus</span>
+        <span class="skill-pill highlight">AWS SQS</span>
+        <span class="skill-pill">Azure EventHub</span>
+        <span class="skill-pill">RabbitMQ</span>
+        <span class="skill-pill">MassTransit</span>
+        <span class="skill-pill">IBM MQ</span>
+        <span class="skill-pill">ActiveMQ</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">🗄</div>
+      <div class="skill-card-title">Frontend</div>
+      <div class="skill-list">
+        <span class="skill-pill highlight">Angular</span>
+        <span class="skill-pill highlight">React</span>
+        <span class="skill-pill highlight">TypeScript</span>
+        <span class="skill-pill highlight">Flutter / Dart</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
       <div class="skill-card-title">Databases</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">PostgreSQL</span><span class="skill-pill highlight">SQL Server</span><span class="skill-pill highlight">Redis</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Elasticsearch</span><span class="skill-pill">SQLite</span><span class="skill-pill">Entity Framework Core</span><span class="skill-pill">Dapper</span>
+        <span class="skill-pill highlight">PostgreSQL</span>
+        <span class="skill-pill highlight">SQL Server</span>
+        <span class="skill-pill highlight">Redis</span>
+        <span class="skill-pill">MySQL</span>
+        <span class="skill-pill">Oracle</span>
+        <span class="skill-pill">MongoDB</span>
+        <span class="skill-pill">SQLite</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">📊</div>
-      <div class="skill-card-title">Observability</div>
+      <div class="skill-card-title">CI/CD & DevOps</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">Dynatrace</span><span class="skill-pill highlight">Datadog</span><span class="skill-pill">Grafana</span><span class="skill-pill">Prometheus</span><span class="skill-pill">OpenTelemetry</span><span class="skill-pill">Serilog</span><span class="skill-pill">NLog</span>
+        <span class="skill-pill highlight">GitHub Actions</span>
+        <span class="skill-pill highlight">Docker</span>
+        <span class="skill-pill highlight">Kubernetes (K8s)</span>
+        <span class="skill-pill highlight">Terraform</span>
+        <span class="skill-pill">Azure DevOps</span>
       </div>
     </div>
+
     <div class="skill-card reveal">
-      <div class="skill-card-icon">📱</div>
-      <div class="skill-card-title">Frontend & Mobile</div>
-      <div class="skill-list">
-        <span class="skill-pill highlight">Flutter / Dart</span><span class="skill-pill highlight">React / Next.js</span><span class="skill-pill">Angular</span><span class="skill-pill">Redux / Zustand</span><span class="skill-pill">React Query</span><span class="skill-pill">Tailwind CSS</span><span class="skill-pill">Riverpod</span><span class="skill-pill">Go Router</span>
-      </div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-card-icon">🔒</div>
-      <div class="skill-card-title">Security & Patterns</div>
-      <div class="skill-list">
-        <span class="skill-pill highlight">OAuth / JWT</span><span class="skill-pill">OWASP / API Security</span><span class="skill-pill">Circuit Breaker</span><span class="skill-pill">Idempotency</span><span class="skill-pill">Rate Limiting</span><span class="skill-pill">Event Sourcing</span><span class="skill-pill">SOLID</span><span class="skill-pill">GoF Patterns</span>
-      </div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-card-icon">🧪</div>
       <div class="skill-card-title">Testing</div>
       <div class="skill-list">
-        <span class="skill-pill highlight">xUnit</span><span class="skill-pill">NUnit</span><span class="skill-pill">Moq</span><span class="skill-pill">NSubstitute</span><span class="skill-pill">Bogus</span><span class="skill-pill">FluentAssertions</span><span class="skill-pill">WireMock.Net</span><span class="skill-pill">Integration Tests</span><span class="skill-pill">Load Tests</span>
+        <span class="skill-pill highlight">TDD</span>
+        <span class="skill-pill">BDD</span>
+        <span class="skill-pill">Unit</span>
+        <span class="skill-pill">Integration</span>
+        <span class="skill-pill">Functional</span>
+        <span class="skill-pill">Acceptance</span>
+        <span class="skill-pill">Load / Stress (k6)</span>
       </div>
     </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-card-title">Observability</div>
+      <div class="skill-list">
+        <span class="skill-pill highlight">Datadog</span>
+        <span class="skill-pill highlight">Dynatrace</span>
+        <span class="skill-pill">OpenTelemetry</span>
+        <span class="skill-pill">Azure Application Insights</span>
+        <span class="skill-pill">AWS CloudWatch</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-card-title">AI-Assisted Development</div>
+      <div class="skill-list">
+        <span class="skill-pill highlight">Claude / Claude Code</span>
+        <span class="skill-pill highlight">GitHub Copilot</span>
+        <span class="skill-pill">Agentic workflows (setup-plan-act)</span>
+        <span class="skill-pill">AI code review</span>
+        <span class="skill-pill">AI-first SDLC</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <hr class="divider">
 
+<!-- EDUCATION -->
 <section id="education">
   <div class="section-label reveal">Academic</div>
   <h2 class="section-title reveal">Education</h2>
-  <p class="section-sub reveal">From technical high school in São Paulo to postgraduate research in Melbourne — built on merit and self-direction at every step.</p>
+  <p class="section-sub reveal">From São Paulo to Melbourne — built on merit at every step.</p>
 
   <div class="edu-timeline">
 
     <div class="edu-item reveal">
       <div>
-        <div class="edu-year">2024 – Present</div>
+        <div class="edu-year">Jun 2026 – Present</div>
       </div>
       <div>
-        <div class="edu-degree">Master by Research</div>
+        <div class="edu-degree">Master by Research — Applied AI / Urban Mobility Planning</div>
         <div class="edu-school">Melbourne, Australia · In Progress</div>
-        <div class="edu-note">Thesis-based postgraduate research degree at an Australian university (AQF Level 9). Full working rights with no hour restrictions under Australian immigration law — equivalent to any permanent resident for employment purposes. Upon completion, eligible for a 3-year Temporary Graduate Visa (subclass 485), allowing continued work in Australia.</div>
+        <div class="edu-note">Research in applied AI, machine learning and urban data science.</div>
         <div class="edu-thesis">
           <div class="edu-thesis-label">Research Thesis</div>
-          <div class="edu-thesis-title">Geospatial Optimisation of Public Transport Infrastructure Using Machine Learning and Victorian Growth Data</div>
-          <p>The research focuses on identifying the most impactful locations for new bus, train and tram stations across Victoria, Australia. The project uses publicly available data from the Victorian Government on projected population growth, urban density and land use patterns — combined with geospatial analysis and machine learning — to recommend optimal transport infrastructure placements.</p>
-          <ul>
-            <li>Uses <strong>Victorian Government datasets</strong> on population growth projections and planned development corridors</li>
-            <li>Applies <strong>machine learning models</strong> to identify underserved areas with the highest future transport demand</li>
-            <li>Produces an <strong>interactive geospatial map</strong> visualising recommended bus, tram and train station locations across the state</li>
-            <li>Combines GIS data, demographic modelling and network analysis to generate evidence-based infrastructure recommendations</li>
-            <li>Aims to support urban planning decision-making by translating complex spatial data into clear, actionable visualisations</li>
-          </ul>
+          <div class="edu-thesis-title">AI Applied to Planning Public Transportation Systems Based on Growing Suburbs Data</div>
+          <p>Applying geospatial machine learning to public transport planning across growing suburbs of Victoria.</p>
           <div class="edu-tech-tags">
-            <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">GIS / Geospatial Analysis</span><span class="chip">Interactive Maps</span><span class="chip">Victorian Gov Data</span><span class="chip">Network Analysis</span>
+            <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">GIS / Geospatial Analysis</span><span class="chip">Victorian Gov Data</span><span class="chip">Network Analysis</span>
           </div>
         </div>
       </div>
@@ -823,8 +756,8 @@
       </div>
       <div>
         <div class="edu-degree">Postgraduate Specialisation — Software Architecture</div>
-        <div class="edu-school">FIAP · São Paulo, Brazil · Equivalent to a Graduate Certificate (AQF Level 8) in Australian qualifications</div>
-        <div class="edu-note">One-year postgraduate specialisation. Deepened knowledge in microservices and containerisation, serverless applications, secure development, project standards and cloud-native architecture patterns. Hands-on application projects throughout.</div>
+        <div class="edu-school">FIAP School of Technology · São Paulo, Brazil</div>
+        <div class="edu-note">Focused on microservices, containerisation, serverless, cloud-native architecture and ADR-driven decision-making. Capstone: Internet Motors — EDA Platform (see Projects).</div>
       </div>
     </div>
 
@@ -833,38 +766,18 @@
         <div class="edu-year">Jan 2018 – Dec 2021</div>
       </div>
       <div>
-        <span class="edu-badge">Brazilian Federal Full Scholarship (ProUni)</span>
-        <div class="edu-degree">Bachelor of Information Systems</div>
-        <div class="edu-school">Faculdade Impacta de Tecnologia · São Paulo, Brazil · Recognised as equivalent to an Australian Bachelor's degree (AQF Level 7) by the ACS</div>
-        <div class="edu-note">Four-year degree. Graduated with one of the highest-ranked TCC projects in the cohort, supervised by Professor Osvaldo Takai.</div>
+        <span class="edu-badge">Full ProUni Merit Scholarship</span>
+        <div class="edu-degree">Bachelor's Degree — Information Systems</div>
+        <div class="edu-school">Impacta College of Technology · São Paulo, Brazil</div>
+        <div class="edu-note">Focused on software development, systems analysis, databases, networks and AI fundamentals. One of the highest-ranked final projects in the cohort. Supervised by Prof. Osvaldo Takai.</div>
         <div class="edu-thesis">
-          <div class="edu-thesis-label">Final Project (TCC)</div>
-          <div class="edu-thesis-title">Microservices vs Monolithic Architecture — A Qualitative Analysis Using Event-Driven Architecture and AWS</div>
-          <p>Comparative qualitative analysis of microservices and monolithic architectures in the context of event-driven systems on AWS. The technical depth and research rigour of this work directly contributed to securing Master by Research admission in Australia years later.</p>
+          <div class="edu-thesis-label">Capstone (TCC)</div>
+          <div class="edu-thesis-title">Microservices vs Monolithic Architectures — Experimental Research</div>
+          <p>Quantitative comparison under K6 load testing. Results: 592 req/60s vs 199; latency 1.64s vs 7.44s; error rate 0% vs 21% — 3x throughput, 78% lower latency. Solo-designed and built all 4 microservices.</p>
+          <div class="edu-tech-tags">
+            <span class="chip">Python</span><span class="chip">AWS Lambda</span><span class="chip">AMQP</span><span class="chip">K6</span>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="edu-item reveal">
-      <div>
-        <div class="edu-year">Jan 2013 – Dec 2015</div>
-      </div>
-      <div>
-        <div class="edu-degree">Technical Diploma — Systems Development</div>
-        <div class="edu-school">ETEC · São Paulo, Brazil · Equivalent to an Australian Certificate IV in Information Technology</div>
-        <div class="edu-note">Technical high school integrated with software development curriculum. Covered programming fundamentals, OOP, databases and systems analysis alongside core subjects. First formal exposure to software engineering.</div>
-      </div>
-    </div>
-
-    <div class="edu-item reveal">
-      <div>
-        <div class="edu-year">2016 – 2017</div>
-      </div>
-      <div>
-        <span class="edu-badge">Merit-based university entry results</span>
-        <div class="edu-degree">National University Entry Exams (ENEM)</div>
-        <div class="edu-school">UFSC · USP São Carlos · Federal Scholarship Program</div>
-        <div class="edu-note">2016 — scored high enough to qualify for UFSC (Federal University of Santa Catarina), one of Brazil's top-ranked public universities. Did not attend due to financial constraints of relocating interstate. 2017 — scored high enough to qualify for USP São Carlos (University of São Paulo), Brazil's most prestigious university. Also secured a full federal scholarship (ProUni) to study Information Systems at Impacta — chosen for proximity and the ability to enter the workforce immediately.</div>
       </div>
     </div>
 
@@ -873,14 +786,19 @@
 
 <hr class="divider">
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-label reveal">Reach out</div>
   <h2 class="section-title reveal">Let's work together</h2>
-  <p class="section-sub reveal">Based in Melbourne with full working rights — available for senior engineering roles, contract work, or technical leadership opportunities.</p>
+  <p class="section-sub reveal">Based in Melbourne with full working rights — available for senior engineering roles, contract work, or technical leadership opportunities. No sponsorship required.</p>
   <div class="contact-links reveal">
     <a href="mailto:paulino.joaovitor@outlook.com" class="contact-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
       paulino.joaovitor@outlook.com
+    </a>
+    <a href="tel:+61431416744" class="contact-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      +61 431 416 744
     </a>
     <a href="https://www.linkedin.com/in/joao-paranhos" target="_blank" class="contact-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -894,8 +812,8 @@
 </section>
 
 <footer>
-  <p>© 2025 João Vitor Paranhos Martins · Melbourne, AU</p>
-  <p>Built with <a href="#hero">Next.js + Tailwind CSS</a></p>
+  <p>© 2025 João Vitor Paranhos Martins · Melbourne, AU · Full working rights</p>
+  <p>Built with HTML · <a href="https://notim.github.io">notim.github.io</a></p>
 </footer>
 
 <script>
